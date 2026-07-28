@@ -13,34 +13,22 @@
 <style>
 
 .back-home {
-  padding:20px;
-  background:#fff9ef;
+  padding: 20px;
 }
 
 .back-home a {
-
-display:inline-block;
-
-background:#e7a51b;
-
-color:white;
-
-padding:12px 22px;
-
-border-radius:50px;
-
-font-weight:bold;
-
-transition:.3s;
-
+  display:inline-block;
+  background:#e7a51b;
+  color:white;
+  padding:12px 22px;
+  border-radius:50px;
+  font-weight:bold;
+  transition:.3s;
 }
 
 .back-home a:hover {
-
-background:#b87400;
-
-transform:translateX(-5px);
-
+  background:#b87400;
+  transform:translateX(-5px);
 }
 
 
@@ -49,7 +37,7 @@ transform:translateX(-5px);
 
 text-align:center;
 
-padding:70px 20px;
+padding:60px 20px;
 
 background:linear-gradient(135deg,#fff0c4,#fff9ef);
 
@@ -58,7 +46,7 @@ background:linear-gradient(135deg,#fff0c4,#fff9ef);
 
 .housing-hero h1 {
 
-font-size:45px;
+font-size:42px;
 
 color:#b87400;
 
@@ -67,11 +55,11 @@ color:#b87400;
 
 .housing-hero p {
 
-max-width:700px;
-
-margin:20px auto;
-
 font-size:18px;
+
+max-width:650px;
+
+margin:auto;
 
 }
 
@@ -81,9 +69,9 @@ font-size:18px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 
-gap:25px;
+gap:20px;
 
 padding:40px 20px;
 
@@ -95,25 +83,24 @@ padding:40px 20px;
 
 background:white;
 
-padding:30px;
+padding:25px;
 
-border-radius:30px;
+border-radius:25px;
 
 text-align:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,.12);
+box-shadow:0 8px 25px rgba(0,0,0,.1);
 
 transition:.3s;
 
-animation:show .6s;
+animation:fade .5s;
 
 }
 
 
-
 .house-card:hover {
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
 }
 
@@ -121,7 +108,7 @@ transform:translateY(-10px);
 
 .house-card .emoji {
 
-font-size:50px;
+font-size:45px;
 
 }
 
@@ -131,15 +118,7 @@ font-size:50px;
 
 color:#b87400;
 
-margin:15px 0;
-
-}
-
-
-
-.house-card p {
-
-color:#666;
+margin:10px;
 
 }
 
@@ -151,17 +130,15 @@ display:inline-block;
 
 margin-top:15px;
 
-padding:12px 22px;
-
-border-radius:50px;
+padding:12px 20px;
 
 background:#e7a51b;
 
 color:white;
 
-font-weight:bold;
+border-radius:50px;
 
-transition:.3s;
+font-weight:bold;
 
 }
 
@@ -175,13 +152,13 @@ background:#b87400;
 
 
 
-@keyframes show {
+@keyframes fade {
 
 from {
 
 opacity:0;
 
-transform:translateY(30px);
+transform:translateY(25px);
 
 }
 
@@ -199,6 +176,7 @@ transform:translateY(0);
 </style>
 
 </head>
+
 
 
 <body>
@@ -242,7 +220,7 @@ transform:translateY(0);
 
 <p>
 
-Explore rentals, neighborhoods, and housing resources across Mexico.
+Explore rentals, neighborhoods, and local communities across Mexico.
 
 </p>
 
@@ -250,90 +228,14 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 
 
+
 <section>
 
 
-<h2>🇲🇽 Find Housing Resources</h2>
-
+<h2>🇲🇽 Find Housing By State</h2>
 
 
 <div class="housing-grid">
-
-
-
-<div class="house-card">
-
-<div class="emoji">🏡</div>
-
-<h3>Inmuebles24</h3>
-
-<p>Homes, apartments, and rentals across Mexico.</p>
-
-<a class="house-button" target="_blank" href="https://www.inmuebles24.com">
-
-🏠 Visit Site
-
-</a>
-
-</div>
-
-
-
-
-<div class="house-card">
-
-<div class="emoji">🏘️</div>
-
-<h3>Vivanuncios</h3>
-
-<p>Search local houses and apartments.</p>
-
-<a class="house-button" target="_blank" href="https://www.vivanuncios.com.mx">
-
-🔎 Search Homes
-
-</a>
-
-</div>
-
-
-
-
-<div class="house-card">
-
-<div class="emoji">💰</div>
-
-<h3>Mercado Libre</h3>
-
-<p>Property listings and rentals.</p>
-
-<a class="house-button" target="_blank" href="https://listado.mercadolibre.com.mx/inmuebles">
-
-🏠 Browse Listings
-
-</a>
-
-</div>
-
-
-
-
-<div class="house-card">
-
-<div class="emoji">🤝</div>
-
-<h3>Community Help</h3>
-
-<p>Find people moving and living in Mexico.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Mexico+housing+community+groups">
-
-🌎 Find Groups
-
-</a>
-
-</div>
-
 
 
 
@@ -343,16 +245,15 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 <h3>Veracruz</h3>
 
-<p>Explore homes and neighborhoods.</p>
+<p>Find homes, rentals, and local housing.</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+rentals">
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+housing">
 
-🏠 Search
+🏠 Find Housing
 
 </a>
 
 </div>
-
 
 
 
@@ -362,16 +263,15 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 <h3>Oaxaca</h3>
 
-<p>Explore homes and neighborhoods.</p>
+<p>Find homes, rentals, and local housing.</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+rentals">
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+housing">
 
-🏠 Search
+🏠 Find Housing
 
 </a>
 
 </div>
-
 
 
 
@@ -381,16 +281,15 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 <h3>Jalisco</h3>
 
-<p>Explore homes and neighborhoods.</p>
+<p>Find homes, rentals, and local housing.</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+rentals">
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+housing">
 
-🏠 Search
+🏠 Find Housing
 
 </a>
 
 </div>
-
 
 
 
@@ -400,11 +299,47 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 <h3>Yucatán</h3>
 
-<p>Explore homes and neighborhoods.</p>
+<p>Find homes, rentals, and local housing.</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+rentals">
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+housing">
 
-🏠 Search
+🏠 Find Housing
+
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🏡</div>
+
+<h3>Aguascalientes</h3>
+
+<p>Find homes, rentals, and local housing.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Aguascalientes+Mexico+housing">
+
+🏠 Find Housing
+
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🌅</div>
+
+<h3>Baja California</h3>
+
+<p>Find homes, rentals, and local housing.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Baja+California+Mexico+housing">
+
+🏠 Find Housing
 
 </a>
 
@@ -418,15 +353,12 @@ Explore rentals, neighborhoods, and housing resources across Mexico.
 
 
 
+
 <section class="community">
 
 <h2>❤️ Need More Help?</h2>
 
-<p>
-
-Connect with people who have already made the move.
-
-</p>
+<p>Connect with people who have already made the move.</p>
 
 
 <div class="buttons">
@@ -439,7 +371,9 @@ Connect with people who have already made the move.
 
 </div>
 
+
 </section>
+
 
 
 
@@ -450,6 +384,7 @@ Connect with people who have already made the move.
 <p>Built by community, for community.</p>
 
 </footer>
+
 
 
 </body>
