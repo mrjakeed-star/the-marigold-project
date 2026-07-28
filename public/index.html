@@ -3,36 +3,862 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>🌼 The Marigold Project</title>
+<title>🌼 The Marigold Project</title>
 
-  <link rel="icon" type="image/png" href="icon.png">
+<meta name="description" content="Your community in Mexico. Resources, connections, and support.">
 
-  <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+
+margin:0;
+
+background:#fff9ef;
+
+color:#3d3428;
+
+padding-top:90px;
+
+}
+
+
+.header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 25px;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+.logo-icon{
+
+font-size:45px;
+
+}
+
+
+.logo h1{
+
+margin:0;
+
+color:#b87400;
+
+}
+
+
+.logo p{
+
+margin:3px 0;
+
+}
+
+
+
+.header-actions button{
+
+background:#e7a51b;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+
+
+.nav{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+background:white;
+
+padding:15px;
+
+}
+
+
+.nav a{
+
+text-decoration:none;
+
+color:#b87400;
+
+font-weight:bold;
+
+}
+
+
+</style>
 
 </head>
-<!-- MINI AI ASSISTANT -->
+
+
+<body>
+
+
+<header class="header">
+
+
+<div class="logo">
+
+<span class="logo-icon">
+🌼
+</span>
+
+
+<div>
+
+<h1>
+The Marigold Project
+</h1>
+
+
+<p>
+Your community in Mexico 🇲🇽
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="header-actions">
+
+<button>
+🇪🇸 Español
+</button>
+
+
+</div>
+
+
+</header>
+
+
+
+<nav class="nav">
+
+<a href="#home">🏠 Home</a>
+
+<a href="#help">🔎 Find Help</a>
+
+<a href="#resources">📚 Resources</a>
+
+<a href="#community">❤️ Community</a>
+
+<a href="#mexico">🇲🇽 Mexico</a>
+
+</nav>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<style>
+
+.hero{
+
+text-align:center;
+
+padding:70px 20px;
+
+background:linear-gradient(
+135deg,
+#fff0c4,
+#fff9ef
+);
+
+}
+
+
+.hero h2{
+
+font-size:45px;
+
+color:#b87400;
+
+}
+
+
+.hero p{
+
+max-width:750px;
+
+margin:auto;
+
+font-size:18px;
+
+}
+
+
+
+section{
+
+padding:40px 20px;
+
+}
+
+
+section h2{
+
+text-align:center;
+
+color:#b87400;
+
+}
+
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:25px;
+
+border-radius:25px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:#3d3428;
+
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+</style>
+
+
+
+<h2>
+Welcome Home 🌼
+</h2>
+
+
+<p>
+Starting a new life in Mexico is a big journey.
+Find housing, jobs, schools, paperwork help,
+local communities, and resources from people
+who understand your path.
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- HELP -->
+
+<section id="help">
+
+
+<h2>
+What do you need today? 🌱
+</h2>
+
+
+<div class="card-grid">
+
+
+
+<a class="card" href="pages/moving.html">
+
+🏡
+
+<h3>
+Moving to Mexico
+</h3>
+
+<p>
+Plan your move step by step.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/housing.html">
+
+🏠
+
+<h3>
+Housing
+</h3>
+
+<p>
+Find homes and neighborhoods.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/jobs.html">
+
+💼
+
+<h3>
+Jobs
+</h3>
+
+<p>
+Work and income resources.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/family.html">
+
+👨‍👩‍👧
+
+<h3>
+Family & Kids
+</h3>
+
+<p>
+Schools and adjusting.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/community.html">
+
+🤝
+
+<h3>
+Community
+</h3>
+
+<p>
+Meet people nearby.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/support.html">
+
+🆘
+
+<h3>
+Support
+</h3>
+
+<p>
+Help when you need it.
+</p>
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- RESOURCES -->
+
+
+<section id="resources">
+
+
+<h2>
+Resource Center 📚
+</h2>
+
+
+<div class="card-grid">
+
+
+
+<a class="card" href="pages/paperwork.html">
+
+📄
+
+<h3>
+Paperwork
+</h3>
+
+<p>
+Residency and documents.
+</p>
+
+</a>
+
+
+
+
+<a class="card" href="pages/money.html">
+
+💰
+
+<h3>
+Money
+</h3>
+
+<p>
+Costs and budgeting.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/healthcare.html">
+
+🏥
+
+<h3>
+Healthcare
+</h3>
+
+<p>
+Doctors and services.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/education.html">
+
+🎒
+
+<h3>
+Education
+</h3>
+
+<p>
+Schools and learning.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/pets.html">
+
+🐶
+
+<h3>
+Pets
+</h3>
+
+<p>
+Moving animals safely.
+</p>
+
+</a>
+
+
+
+
+
+<a class="card" href="pages/learn.html">
+
+📖
+
+<h3>
+Learn Mexico
+</h3>
+
+<p>
+Culture and language.
+</p>
+
+</a>
+
+
+
+</div>
+
+
+</section>
+<!-- COMMUNITY -->
+
+<section id="community">
+
+<style>
+
+.community{
+
+background:#fce4dd;
+
+text-align:center;
+
+}
+
+
+.community-buttons a{
+
+display:inline-block;
+
+background:white;
+
+padding:15px 25px;
+
+margin:10px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#b87400;
+
+font-weight:bold;
+
+}
+
+
+.states{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+.states a{
+
+background:white;
+
+padding:15px 25px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#b87400;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+/* MINI AI */
+
+.ai-box{
+
+max-width:600px;
+
+margin:40px auto;
+
+background:white;
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+text-align:center;
+
+}
+
+
+#chat{
+
+background:#fff9ef;
+
+padding:15px;
+
+border-radius:15px;
+
+min-height:120px;
+
+text-align:left;
+
+margin-bottom:15px;
+
+overflow:auto;
+
+}
+
+
+#aiInput{
+
+width:70%;
+
+padding:12px;
+
+border-radius:50px;
+
+border:1px solid #ddd;
+
+}
+
+
+
+.ai-box button{
+
+background:#e7a51b;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+}
+
+
+
+footer{
+
+background:#342b20;
+
+color:white;
+
+padding:35px;
+
+text-align:center;
+
+}
+
+</style>
+
+
+
+<h2>
+You Are Not Alone ❤️
+</h2>
+
+
+<p>
+Connect with families and people who have taken this journey.
+</p>
+
+
+
+<div class="community-buttons">
+
+<a href="pages/groups.html">
+👥 Groups
+</a>
+
+
+<a href="pages/events.html">
+📅 Events
+</a>
+
+
+<a href="pages/friends.html">
+🤝 Friends
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- MEXICO -->
+
+
+<section id="mexico">
+
+
+<h2>
+Explore Mexico 🇲🇽
+</h2>
+
+
+
+<div class="states">
+
+
+<a href="states/veracruz.html">
+🌊 Veracruz
+</a>
+
+
+<a href="states/oaxaca.html">
+🌺 Oaxaca
+</a>
+
+
+<a href="states/jalisco.html">
+🌵 Jalisco
+</a>
+
+
+<a href="states/yucatan.html">
+🏝️ Yucatán
+</a>
+
+
+<a href="states/baja.html">
+🌅 Baja California
+</a>
+
+
+<a href="states/all.html">
+🇲🇽 All States
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- MINI AI -->
+
 
 <section class="ai-box">
 
-<h2>🌼 Marigold Assistant</h2>
+
+<h2>
+🌼 Marigold Assistant
+</h2>
+
 
 <p>
-Ask me about housing, moving, jobs, or Mexico.
+Ask about moving, housing, jobs, or Mexico.
 </p>
 
 
 <div id="chat">
 
+<p>
+<b>🌼 Assistant:</b> Hi! How can I help you today?
+</p>
+
 </div>
 
 
-<input 
-id="aiInput"
-placeholder="Ask something..."
->
+
+<input id="aiInput" placeholder="Ask something...">
 
 
 <button onclick="askAI()">
@@ -40,384 +866,109 @@ Send
 </button>
 
 
+
 </section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+<h2>
+🌼 The Marigold Project
+</h2>
+
+
+<p>
+Built by community, for community ❤️
+</p>
+
+
+</footer>
+
+
+
+
 
 
 <script>
 
+
 function askAI(){
+
 
 let input=document.getElementById("aiInput");
 
 let chat=document.getElementById("chat");
 
+
 let question=input.value.toLowerCase();
-
-
-chat.innerHTML += 
-"<p><b>You:</b> "+input.value+"</p>";
 
 
 let answer="";
 
 
+
 if(question.includes("housing")){
 
-answer="🏠 Check the Housing section to find homes, neighborhoods, and communities by state.";
+answer="🏠 Check the Housing page to find homes, neighborhoods, and communities.";
 
 }
 
 else if(question.includes("job")){
 
-answer="💼 Visit the Jobs section for work and income resources.";
+answer="💼 Visit the Jobs section for work resources.";
 
 }
 
-else if(question.includes("move") || question.includes("moving")){
+else if(question.includes("moving")){
 
-answer="🚚 Moving to Mexico takes planning. Start with paperwork, housing, and community connections.";
+answer="🚚 Start with paperwork, housing, and finding your community.";
 
 }
 
 else if(question.includes("veracruz")){
 
-answer="🌊 Veracruz is a beautiful coastal state with cities, beaches, and local communities.";
+answer="🌊 Veracruz is a coastal state with cities, beaches, and local communities.";
 
 }
 
 else if(question.includes("hello") || question.includes("hi")){
 
-answer="🌼 Hello! I'm the Marigold Assistant. How can I help?";
+answer="🌼 Hello! I am the Marigold Assistant.";
 
 }
 
 else{
 
-answer="🌼 I'm still learning! Try asking about housing, jobs, moving, or Mexico.";
+answer="🌼 I am still learning. Try asking about housing, jobs, moving, or Mexico.";
 
 }
 
 
 
-chat.innerHTML += 
+chat.innerHTML +=
+
+"<p><b>You:</b> "+input.value+"</p>" +
+
 "<p><b>🌼 Assistant:</b> "+answer+"</p>";
 
 
+
 input.value="";
+
 
 }
 
 
 </script>
-<body>
 
-  <!-- HEADER -->
-  <header class="header">
 
-    <div class="logo">
-      <span class="logo-icon">🌼</span>
-
-      <div>
-        <h1>The Marigold Project</h1>
-        <p>Your community in Mexico 🇲🇽</p>
-      </div>
-    </div>
-
-
-    <div class="header-actions">
-      <button id="language-toggle">
-        🇪🇸 Español
-      </button>
-
-      <button class="menu-button">
-        ☰
-      </button>
-    </div>
-
-  </header>
-
-
-
-  <!-- NAVIGATION -->
-  <nav class="nav">
-
-    <a href="#home">🏠 Home</a>
-    <a href="#help">🔎 Find Help</a>
-    <a href="#resources">📚 Resources</a>
-    <a href="#community">❤️ Community</a>
-    <a href="#mexico">🇲🇽 Mexico</a>
-
-  </nav>
-
-
-
-
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <h2>
-        Welcome Home 🌼
-      </h2>
-
-      <h3>
-        Starting a new life in Mexico is a big journey.
-      </h3>
-
-      <p>
-        Find housing, jobs, schools, paperwork help,
-        local communities, and resources from people
-        who understand your path.
-      </p>
-
-
-      <div class="search-box">
-
-        <input
-          id="search"
-          type="search"
-          placeholder="🔎 Search resources..."
-        >
-
-        <button>
-          Search
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-
-
-  <!-- HELP -->
-  <section id="help">
-
-    <h2>What do you need today? 🌱</h2>
-
-
-    <div class="card-grid">
-
-
-      <a href="pages/moving.html" class="card">
-        🏡
-        <h3>Moving to Mexico</h3>
-        <p>Plan your move step by step.</p>
-      </a>
-
-
-      <a href="pages/housing.html" class="card">
-        🏠
-        <h3>Housing</h3>
-        <p>Find homes and neighborhoods.</p>
-      </a>
-
-
-      <a href="pages/jobs.html" class="card">
-        💼
-        <h3>Jobs</h3>
-        <p>Work and income resources.</p>
-      </a>
-
-
-      <a href="pages/family.html" class="card">
-        👨‍👩‍👧
-        <h3>Family & Kids</h3>
-        <p>Schools and adjusting.</p>
-      </a>
-
-
-      <a href="pages/community.html" class="card">
-        🤝
-        <h3>Community</h3>
-        <p>Meet people nearby.</p>
-      </a>
-
-
-      <a href="pages/support.html" class="card">
-        🆘
-        <h3>Support</h3>
-        <p>Help when you need it.</p>
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-
-
-
-
-
-  <!-- RESOURCES -->
-  <section id="resources" class="resources">
-
-    <h2>Resource Center 📚</h2>
-
-
-    <div class="card-grid">
-
-
-      <a href="pages/paperwork.html" class="card">
-        📄
-        <h3>Paperwork</h3>
-        <p>Residency and documents.</p>
-      </a>
-
-
-      <a href="pages/money.html" class="card">
-        💰
-        <h3>Money</h3>
-        <p>Costs and budgeting.</p>
-      </a>
-
-
-      <a href="pages/healthcare.html" class="card">
-        🏥
-        <h3>Healthcare</h3>
-        <p>Doctors and services.</p>
-      </a>
-
-
-      <a href="pages/education.html" class="card">
-        🎒
-        <h3>Education</h3>
-        <p>Schools and learning.</p>
-      </a>
-
-
-      <a href="pages/pets.html" class="card">
-        🐶
-        <h3>Pets</h3>
-        <p>Moving animals safely.</p>
-      </a>
-
-
-      <a href="pages/learn.html" class="card">
-        📖
-        <h3>Learn Mexico</h3>
-        <p>Culture and language.</p>
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-
-
-
-
-  <!-- COMMUNITY -->
-  <section id="community" class="community">
-
-    <h2>You Are Not Alone ❤️</h2>
-
-    <p>
-      Connect with families and people who have taken this journey.
-    </p>
-
-
-    <div class="community-buttons">
-
-      <a href="pages/groups.html">
-        👥 Groups
-      </a>
-
-      <a href="pages/events.html">
-        📅 Events
-      </a>
-
-      <a href="pages/friends.html">
-        🤝 Friends
-      </a>
-
-    </div>
-
-
-  </section>
-
-
-
-
-
-
-
-  <!-- MEXICO -->
-  <section id="mexico">
-
-    <h2>Explore Mexico 🇲🇽</h2>
-
-
-    <div class="states">
-
-
-      <a href="states/veracruz.html">
-        🌊 Veracruz
-      </a>
-
-
-      <a href="states/oaxaca.html">
-        🌺 Oaxaca
-      </a>
-
-
-      <a href="states/jalisco.html">
-        🌵 Jalisco
-      </a>
-
-
-      <a href="states/yucatan.html">
-        🏝️ Yucatán
-      </a>
-
-
-      <a href="states/baja.html">
-        🌅 Baja California
-      </a>
-
-
-      <a href="states/all.html">
-        🇲🇽 All States
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-
-
-
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <h2>
-      🌼 The Marigold Project
-    </h2>
-
-    <p>
-      Built by community, for community ❤️
-    </p>
-
-  </footer>
-
-
-
-
-
-<script src="app.js"></script>
 
 </body>
 
