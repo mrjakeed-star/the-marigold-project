@@ -1,355 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>🏠 Housing | The Marigold Project</title>
-
-<link rel="stylesheet" href="../style.css">
-
-<style>
-
-.back-home {
-  padding:20px;
-  background:#fff9ef;
-}
-
-.back-home a {
-  display:inline-block;
-  background:#e7a51b;
-  color:white;
-  padding:12px 22px;
-  border-radius:50px;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.back-home a:hover {
-  background:#b87400;
-  transform:translateX(-5px);
-}
-
-
-.housing-hero {
-
-text-align:center;
-
-padding:60px 20px;
-
-background:linear-gradient(135deg,#fff0c4,#fff9ef);
-
-}
-
-
-.housing-hero h1 {
-
-font-size:42px;
-
-color:#b87400;
-
-}
-
-
-.housing-hero p {
-
-max-width:700px;
-
-margin:auto;
-
-font-size:18px;
-
-}
-
-
-
-.housing-grid {
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
-gap:20px;
-
-padding:40px 20px;
-
-}
-
-
-
-.house-card {
-
-background:white;
-
-padding:25px;
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-
-transition:.3s;
-
-animation:fade .5s;
-
-}
-
-
-.house-card:hover {
-
-transform:translateY(-8px);
-
-}
-
-
-.emoji {
-
-font-size:45px;
-
-}
-
-
-.house-card h3 {
-
-color:#b87400;
-
-margin:15px;
-
-}
-
-
-.house-button {
-
-display:inline-block;
-
-background:#e7a51b;
-
-color:white;
-
-padding:12px 20px;
-
-border-radius:50px;
-
-font-weight:bold;
-
-margin-top:10px;
-
-}
-
-
-.house-button:hover {
-
-background:#b87400;
-
-}
-
-
-@keyframes fade {
-
-from {
-
-opacity:0;
-
-transform:translateY(25px);
-
-}
-
-to {
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<header class="header">
-
-<div class="logo">
-
-🌼
-
-<div>
-
-<h1>The Marigold Project</h1>
-
-<p>Your community in Mexico 🇲🇽</p>
-
-</div>
-
-</div>
-
-</header>
-
-
-
-<!-- BACK BUTTON -->
-
-<div class="back-home">
-
-<a href="../index.html">
-
-← 🌼 Back to Home
-
-</a>
-
-</div>
-
-
-
-<section class="housing-hero">
-
-<h1>🏠 Housing in Mexico</h1>
-
-<p>
-Explore rentals, neighborhoods, and local communities across Mexico.
-</p>
-
-</section>
-
-
-
 <section>
 
 <h2>🇲🇽 Find Housing By State</h2>
 
-
 <div class="housing-grid">
 
 
+<div class="house-card">
+<div class="emoji">🌊</div>
+<h3>Veracruz</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+housing">
+🏠 Find Housing
+</a>
+</div>
 
-<!-- STATE CARDS -->
-
-<script>
-
-const states = [
-
-["🏡","Aguascalientes"],
-["🌊","Baja California"],
-["🌅","Baja California Sur"],
-["🌴","Campeche"],
-["🌿","Chiapas"],
-["🐺","Chihuahua"],
-["⛰️","Coahuila"],
-["🌺","Colima"],
-["🌵","Durango"],
-["🏘️","Guanajuato"],
-["🌊","Guerrero"],
-["🏔️","Hidalgo"],
-["🌵","Jalisco"],
-["🏙️","Estado de Mexico"],
-["🌲","Michoacan"],
-["🌸","Morelos"],
-["🌊","Nayarit"],
-["🏙️","Nuevo Leon"],
-["🌺","Oaxaca"],
-["🏛️","Puebla"],
-["🏡","Queretaro"],
-["🏝️","Quintana Roo"],
-["🌄","San Luis Potosi"],
-["🌊","Sinaloa"],
-["☀️","Sonora"],
-["🌿","Tabasco"],
-["🌊","Tamaulipas"],
-["🌸","Tlaxcala"],
-["🌊","Veracruz"],
-["🏝️","Yucatan"],
-["⛰️","Zacatecas"]
-
-];
-
-
-document.write(
-
-states.map(state => `
 
 <div class="house-card">
-
-<div class="emoji">${state[0]}</div>
-
-<h3>${state[1]}</h3>
-
-<p>
-Find homes, rentals, and local housing.
-</p>
-
-<a class="house-button"
-target="_blank"
-href="https://www.google.com/search?q=${state[1]}+Mexico+housing">
-
+<div class="emoji">🌺</div>
+<h3>Oaxaca</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+housing">
 🏠 Find Housing
-
 </a>
-
 </div>
 
-`).join("")
 
-);
+<div class="house-card">
+<div class="emoji">🌵</div>
+<h3>Jalisco</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+housing">
+🏠 Find Housing
+</a>
+</div>
 
-</script>
+
+<div class="house-card">
+<div class="emoji">🏝️</div>
+<h3>Yucatán</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+housing">
+🏠 Find Housing
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🏡</div>
+<h3>Aguascalientes</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Aguascalientes+Mexico+housing">
+🏠 Find Housing
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🌅</div>
+<h3>Baja California</h3>
+<p>Find homes, rentals, and neighborhoods.</p>
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Baja+California+Mexico+housing">
+🏠 Find Housing
+</a>
+</div>
 
 
 </div>
 
 </section>
-
-
-
-
-<section class="community">
-
-<h2>❤️ Need More Help?</h2>
-
-<p>
-Connect with people who have already made the move.
-</p>
-
-
-<div class="buttons">
-
-<a href="community.html">
-🤝 Community
-</a>
-
-<a href="jobs.html">
-💼 Jobs
-</a>
-
-<a href="moving.html">
-🚚 Moving
-</a>
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-<h2>🌼 The Marigold Project</h2>
-
-<p>
-Built by community, for community.
-</p>
-
-</footer>
-
-
-
-</body>
-
-</html>
