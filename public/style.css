@@ -1,3 +1,10 @@
+/* =====================================
+   THE MARIGOLD PROJECT
+   Main Stylesheet
+===================================== */
+
+/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,141 +16,218 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
   background: #fff9ef;
+
   color: #3d3428;
+
   line-height: 1.6;
 }
 
+/* COLORS */
+
 :root {
   --gold: #e7a51b;
+
   --gold-dark: #b87400;
+
   --cream: #fff1c9;
+
   --green: #79a94b;
+
   --soft-green: #eaf5df;
+
   --pink: #fce4dd;
+
   --white: #ffffff;
-  --shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
+
+/* LINKS */
 
 a {
   text-decoration: none;
+
   color: inherit;
 }
 
-
-/* HEADER */
+/* ===========================
+HEADER
+=========================== */
 
 .header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
+
   background: white;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   padding: 15px 20px;
-  box-shadow: var(--shadow);
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+}
+
+.logo:first-letter {
+  font-size: 35px;
 }
 
 .logo h1 {
   color: var(--gold-dark);
-  font-size: 22px;
+
+  font-size: 20px;
 }
 
 .logo p {
   color: #777;
-  font-size: 13px;
-}
 
+  font-size: 12px;
+}
 
 .header-buttons {
   display: flex;
+
   gap: 10px;
 }
 
-button {
+.header-buttons button {
   border: none;
+
   background: var(--cream);
+
   padding: 10px 14px;
+
   border-radius: 50px;
+
   cursor: pointer;
+
+  font-weight: bold;
 }
 
+.menu-button {
+  font-size: 20px;
+}
 
-/* MENU */
+/* ===========================
+NAVIGATION
+=========================== */
 
 .menu {
   display: flex;
+
   justify-content: center;
+
   gap: 15px;
+
   padding: 15px;
+
   background: white;
 }
 
 .menu a {
   padding: 10px 15px;
+
   border-radius: 20px;
-  font-weight: bold;
+
+  font-weight: 600;
 }
 
 .menu a:hover {
   background: var(--cream);
 }
 
-
-/* HERO */
+/* ===========================
+HERO
+=========================== */
 
 .hero {
   text-align: center;
+
   padding: 60px 20px;
-  background: linear-gradient(135deg,#fff0c4,#fff9ef);
+
+  background: linear-gradient(135deg, #fff0c4, #fff9ef);
 }
 
 .hero h2 {
   font-size: 42px;
+
   color: var(--gold-dark);
+
+  margin-bottom: 10px;
 }
 
 .hero h3 {
-  margin: 15px;
+  font-size: 22px;
+
+  margin-bottom: 20px;
 }
 
 .hero p {
   max-width: 650px;
-  margin: auto;
-}
 
+  margin: auto;
+
+  font-size: 17px;
+}
 
 /* SEARCH */
 
 .search {
-  margin: 35px auto;
+  margin: 35px auto 0;
+
   max-width: 600px;
+
   display: flex;
+
   gap: 10px;
 }
 
 .search input {
   flex: 1;
+
   padding: 17px;
+
   border-radius: 25px;
+
   border: 2px solid #e8d39b;
+
+  font-size: 16px;
 }
 
 .search button {
+  width: 60px;
+
+  border: none;
+
+  border-radius: 25px;
+
   background: var(--gold);
+
   color: white;
+
+  font-size: 20px;
 }
 
-
-/* SECTIONS */
+/* ===========================
+SECTIONS
+=========================== */
 
 section {
   padding: 50px 20px;
@@ -151,27 +235,38 @@ section {
 
 section h2 {
   text-align: center;
+
   color: var(--gold-dark);
+
   font-size: 32px;
+
   margin-bottom: 30px;
 }
 
-
-/* CARDS */
+/* ===========================
+CARDS
+=========================== */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
   gap: 20px;
 }
 
 .cards a {
   background: white;
+
   padding: 25px;
+
   border-radius: 25px;
+
   text-align: center;
+
   box-shadow: var(--shadow);
-  transition: .3s;
+
+  transition: 0.3s;
 }
 
 .cards a:hover {
@@ -180,40 +275,83 @@ section h2 {
 
 .cards h3 {
   color: var(--gold-dark);
+
+  margin: 10px 0;
 }
 
+.cards p {
+  color: #666;
 
-/* COMMUNITY */
+  font-size: 15px;
+}
+
+/* ===========================
+COMMUNITY
+=========================== */
 
 .community {
   background: var(--pink);
+
   text-align: center;
 }
 
+.buttons {
+  display: flex;
 
-/* STATES */
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.buttons a {
+  background: white;
+
+  padding: 18px 25px;
+
+  border-radius: 50px;
+
+  box-shadow: var(--shadow);
+
+  font-weight: bold;
+}
+
+/* ===========================
+STATES
+=========================== */
 
 .states {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
   gap: 15px;
 }
 
 .states a {
   background: var(--soft-green);
+
   padding: 20px;
+
   border-radius: 20px;
+
   text-align: center;
+
   font-weight: bold;
 }
 
-
-/* FOOTER */
+/* ===========================
+FOOTER
+=========================== */
 
 footer {
   background: #342b20;
+
   color: white;
+
   text-align: center;
+
   padding: 50px 20px;
 }
 
@@ -221,25 +359,83 @@ footer h2 {
   color: #ffd66d;
 }
 
+/* ===========================
+MOBILE IMPROVEMENTS
+=========================== */
 
-/* MOBILE */
-
-@media(max-width:700px){
-
+@media (max-width: 700px) {
   .menu {
-    overflow-x:auto;
+    overflow-x: auto;
+
+    justify-content: flex-start;
+  }
+
+  .menu a {
+    white-space: nowrap;
+
+    background: var(--cream);
   }
 
   .hero h2 {
-    font-size:34px;
+    font-size: 34px;
+  }
+
+  .hero h3 {
+    font-size: 20px;
   }
 
   .search {
-    flex-direction:column;
+    flex-direction: column;
+  }
+
+  .search button {
+    width: 100%;
+
+    padding: 15px;
   }
 
   .cards {
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
   }
 
+  .cards a {
+    padding: 30px 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
+
+  .states {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===========================
+DARK MODE SUPPORT
+=========================== */
+
+.dark {
+  background: #171717;
+
+  color: white;
+}
+
+.dark .header,
+.dark .menu,
+.dark .cards a {
+  background: #252525;
+}
+
+.dark .cards p {
+  color: #ddd;
+}
+
+.dark h2,
+.dark h3 {
+  color: #ffd66d;
 }
