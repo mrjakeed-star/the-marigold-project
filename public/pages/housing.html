@@ -31,99 +31,66 @@
 
 
 .housing-grid {
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
-
-padding:40px 20px;
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:40px 20px;
 }
 
 
 .house-card {
-
-background:white;
-
-padding:30px;
-
-border-radius:30px;
-
-text-align:center;
-
-box-shadow:0 10px 30px rgba(0,0,0,.12);
-
-transition:.3s;
-
-animation:fade .5s;
-
+  background:white;
+  padding:30px;
+  border-radius:30px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  transition:.3s;
+  animation:fade .5s;
 }
 
 
 .house-card:hover {
-
-transform:translateY(-10px);
-
+  transform:translateY(-10px);
 }
 
 
-.house-card .emoji {
-
-font-size:50px;
-
+.emoji {
+  font-size:50px;
 }
 
 
 .house-card h3 {
-
-color:#b87400;
-
-margin:15px 0;
-
+  color:#b87400;
+  margin:15px 0;
 }
 
 
 .house-button {
-
-display:inline-block;
-
-background:#e7a51b;
-
-color:white;
-
-padding:12px 20px;
-
-border-radius:50px;
-
-margin-top:10px;
-
-font-weight:bold;
-
+  display:inline-block;
+  background:#e7a51b;
+  color:white;
+  padding:12px 22px;
+  border-radius:50px;
+  margin-top:10px;
+  font-weight:bold;
 }
 
 
 .house-button:hover {
-
-background:#b87400;
-
+  background:#b87400;
 }
 
 
 @keyframes fade {
+  from {
+    opacity:0;
+    transform:translateY(30px);
+  }
 
-from {
-opacity:0;
-transform:translateY(30px);
-}
-
-to {
-opacity:1;
-transform:translateY(0);
-}
-
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 </style>
@@ -141,11 +108,8 @@ transform:translateY(0);
 🌼
 
 <div>
-
 <h1>The Marigold Project</h1>
-
 <p>Your community in Mexico 🇲🇽</p>
-
 </div>
 
 </div>
@@ -174,68 +138,14 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <div class="housing-grid">
 
 
+
 <!-- CARDS -->
-
-
-<div class="house-card">
-<div class="emoji">🏠</div>
-<h3>Aguascalientes</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Aguascalientes+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
 
 <div class="house-card">
 <div class="emoji">🌊</div>
-<h3>Baja California</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
-
-<div class="house-card">
-<div class="emoji">🌅</div>
-<h3>Baja California Sur</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Sur+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
-
-<div class="house-card">
-<div class="emoji">🌴</div>
-<h3>Campeche</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Campeche+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
-
-<div class="house-card">
-<div class="emoji">🌿</div>
-<h3>Chiapas</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Chiapas+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
-
-<div class="house-card">
-<div class="emoji">🐺</div>
-<h3>Chihuahua</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Chihuahua+Mexico">
-🔎 Find Groups
-</a>
-</div>
-
-
-<div class="house-card">
-<div class="emoji">🌵</div>
-<h3>Jalisco</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Jalisco+Mexico">
-🔎 Find Groups
+<h3>Veracruz</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Veracruz%20Mexico">
+🔎 Find Housing Groups
 </a>
 </div>
 
@@ -243,17 +153,17 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <div class="house-card">
 <div class="emoji">🌺</div>
 <h3>Oaxaca</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Oaxaca+Mexico">
-🔎 Find Groups
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Oaxaca%20Mexico">
+🔎 Find Housing Groups
 </a>
 </div>
 
 
 <div class="house-card">
-<div class="emoji">🌊</div>
-<h3>Veracruz</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Veracruz+Mexico">
-🔎 Find Groups
+<div class="emoji">🌵</div>
+<h3>Jalisco</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Jalisco%20Mexico">
+🔎 Find Housing Groups
 </a>
 </div>
 
@@ -261,8 +171,53 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <div class="house-card">
 <div class="emoji">🏝️</div>
 <h3>Yucatán</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Yucatan+Mexico">
-🔎 Find Groups
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Yucatan%20Mexico">
+🔎 Find Housing Groups
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🏠</div>
+<h3>Aguascalientes</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Aguascalientes%20Mexico">
+🔎 Find Housing Groups
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🌅</div>
+<h3>Baja California Sur</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Baja%20California%20Sur%20Mexico">
+🔎 Find Housing Groups
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🌴</div>
+<h3>Quintana Roo</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Quintana%20Roo%20Mexico">
+🔎 Find Housing Groups
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🏙️</div>
+<h3>Nuevo León</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Nuevo%20Leon%20Mexico">
+🔎 Find Housing Groups
+</a>
+</div>
+
+
+<div class="house-card">
+<div class="emoji">🏡</div>
+<h3>Querétaro</h3>
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Queretaro%20Mexico">
+🔎 Find Housing Groups
 </a>
 </div>
 
@@ -270,8 +225,8 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <div class="house-card">
 <div class="emoji">⛰️</div>
 <h3>Zacatecas</h3>
-<a class="house-button" target="_blank" href="https://www.facebook.com/groups/search/groups/?q=Zacatecas+Mexico">
-🔎 Find Groups
+<a class="house-button" target="_blank" href="https://www.facebook.com/search/groups/?q=Zacatecas%20Mexico">
+🔎 Find Housing Groups
 </a>
 </div>
 
@@ -289,6 +244,7 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <p>
 Connect with people who have already made the move.
 </p>
+
 
 <div class="buttons">
 
