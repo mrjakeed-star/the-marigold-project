@@ -8,44 +8,223 @@
 
 <title>🏠 Housing | The Marigold Project</title>
 
-<link rel="stylesheet" href="../style.css">
-
 <style>
 
-.back-home {
-  padding:20px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',Arial,sans-serif;
 }
 
-.back-home a {
-  display:inline-block;
-  background:#e7a51b;
-  color:white;
-  padding:12px 22px;
-  border-radius:50px;
-  font-weight:bold;
-  transition:.3s;
-}
+body{
 
-.back-home a:hover {
-  background:#b87400;
-  transform:translateX(-5px);
+background:#fff9ef;
+color:#3d3428;
+
 }
 
 
-.housing-grid {
+a{
+
+text-decoration:none;
+color:inherit;
+
+}
+
+
+
+/* HEADER */
+
+.header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+position:sticky;
+
+top:0;
+
+z-index:10;
+
+}
+
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+
+.logo:first-letter{
+
+font-size:40px;
+
+}
+
+
+.logo h1{
+
+color:#b87400;
+
+font-size:22px;
+
+}
+
+
+.logo p{
+
+color:#777;
+
+font-size:13px;
+
+}
+
+
+
+button{
+
+border:none;
+
+background:#fff1c9;
+
+padding:12px 18px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+
+
+
+/* BACK */
+
+.back-home{
+
+padding:20px;
+
+}
+
+
+.back-home a{
+
+background:#e7a51b;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+display:inline-block;
+
+transition:.3s;
+
+}
+
+
+.back-home a:hover{
+
+background:#b87400;
+
+transform:translateX(-5px);
+
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+text-align:center;
+
+padding:70px 20px;
+
+background:linear-gradient(135deg,#fff0c4,#fff9ef);
+
+}
+
+
+.hero h2{
+
+font-size:42px;
+
+color:#b87400;
+
+margin-bottom:15px;
+
+}
+
+
+.hero p{
+
+font-size:18px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+
+
+
+/* CARDS */
+
+
+section{
+
+padding:40px 20px;
+
+}
+
+
+section h2{
+
+text-align:center;
+
+color:#b87400;
+
+font-size:32px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.housing-grid{
 
 display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 
-gap:20px;
-
-padding:30px 20px;
+gap:22px;
 
 }
 
 
-.house-card {
+
+.house-card{
 
 background:white;
 
@@ -57,26 +236,33 @@ text-align:center;
 
 box-shadow:0 8px 25px rgba(0,0,0,.1);
 
-transition:.3s;
+transition:.4s;
+
+opacity:0;
+
+transform:translateY(30px);
 
 }
 
 
-.house-card:hover {
+
+.house-card:hover{
 
 transform:translateY(-8px);
 
 }
 
 
-.house-card .emoji {
+
+.emoji{
 
 font-size:45px;
 
 }
 
 
-.house-card h3 {
+
+.house-card h3{
 
 color:#b87400;
 
@@ -85,7 +271,16 @@ margin:15px 0;
 }
 
 
-.house-button {
+
+.house-card p{
+
+color:#666;
+
+}
+
+
+
+.house-button{
 
 display:inline-block;
 
@@ -93,20 +288,98 @@ background:#e7a51b;
 
 color:white;
 
-padding:10px 20px;
+padding:12px 20px;
+
+border-radius:50px;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+
+
+.house-button:hover{
+
+background:#b87400;
+
+}
+
+
+
+/* COMMUNITY */
+
+
+.community{
+
+background:#fce4dd;
+
+text-align:center;
+
+}
+
+
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+}
+
+
+.buttons a{
+
+background:white;
+
+padding:15px 25px;
 
 border-radius:50px;
 
 font-weight:bold;
 
-margin-top:10px;
+}
+
+
+
+
+footer{
+
+background:#342b20;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
 
 }
 
 
-.house-button:hover {
+footer h2{
 
-background:#b87400;
+color:#ffd66d;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+.hero h2{
+
+font-size:32px;
+
+}
 
 }
 
@@ -116,10 +389,13 @@ background:#b87400;
 </head>
 
 
+
 <body>
 
 
+
 <header class="header">
+
 
 <div class="logo">
 
@@ -127,29 +403,25 @@ background:#b87400;
 
 <div>
 
-<h1 data-translate="title">
-The Marigold Project
-</h1>
+<h1>The Marigold Project</h1>
 
-<p data-translate="tagline">
-Your community in Mexico
-</p>
+<p>Your community in Mexico</p>
 
 </div>
 
 </div>
 
 
-<div class="header-buttons">
 
 <button id="language-toggle">
-🇪🇸 Español
-</button>
 
-</div>
+🇪🇸 Español
+
+</button>
 
 
 </header>
+
 
 
 
@@ -157,9 +429,7 @@ Your community in Mexico
 
 <a href="../index.html">
 
-← 🌼 <span data-translate="back">
-Back to Home
-</span>
+← 🌼 <span>Back to Home</span>
 
 </a>
 
@@ -167,33 +437,92 @@ Back to Home
 
 
 
+
 <section class="hero">
 
-<h2 data-translate="housing">
-🏠 Housing in Mexico
-</h2>
+<h2>🏠 Housing in Mexico</h2>
 
-<p data-translate="housingDescription">
+<p>
+
 Explore rentals, neighborhoods, and local communities across Mexico.
+
 </p>
 
 </section>
 
 
 
+
+
 <section>
 
-<h2 data-translate="findHousing">
-🇲🇽 Find Housing By State
-</h2>
+
+<h2>🇲🇽 Find Housing By State</h2>
 
 
-<div class="housing-grid">
+<div class="housing-grid" id="states">
 
 
-<!-- CARDS -->
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="community">
+
+
+<h2>❤️ Need More Help?</h2>
+
+<p>
+
+Connect with people who have already made the move.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="community.html">
+🤝 Community
+</a>
+
+<a href="jobs.html">
+💼 Jobs
+</a>
+
+<a href="moving.html">
+🚚 Moving
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<h2>🌼 The Marigold Project</h2>
+
+<p>Built by community, for community.</p>
+
+</footer>
+
+
+
+
+
+
 
 <script>
+
 
 const states = [
 
@@ -233,29 +562,40 @@ const states = [
 ];
 
 
-document.write(
 
-states.map(state => `
+const container=document.getElementById("states");
+
+
+states.forEach(state=>{
+
+
+container.innerHTML += `
 
 <div class="house-card">
 
+
 <div class="emoji">
+
 ${state[0]}
+
 </div>
 
 
 <h3>
+
 ${state[1]}
+
 </h3>
 
 
 <p>
+
 Find homes, rentals, and neighborhoods.
+
 </p>
 
 
-<a 
-class="house-button"
+<a class="house-button"
 target="_blank"
 href="https://www.google.com/search?q=${encodeURIComponent(state[1]+" Mexico housing")}">
 
@@ -266,71 +606,92 @@ href="https://www.google.com/search?q=${encodeURIComponent(state[1]+" Mexico hou
 
 </div>
 
-`).join("")
 
-);
+`;
+
+
+});
+
+
+
+
+// CARD ANIMATION
+
+
+const cards=document.querySelectorAll(".house-card");
+
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+
+cards.forEach(card=>observer.observe(card));
+
+
+
+
+
+// TRANSLATE
+
+
+const button=document.getElementById("language-toggle");
+
+
+let spanish=false;
+
+
+button.onclick=()=>{
+
+
+spanish=!spanish;
+
+
+document.querySelector("h1").innerText =
+spanish ? "El Proyecto Marigold" : "The Marigold Project";
+
+
+document.querySelector(".logo p").innerText =
+spanish ? "Tu comunidad en México" : "Your community in Mexico";
+
+
+document.querySelector(".hero h2").innerText =
+spanish ? "🏠 Vivienda en México" : "🏠 Housing in Mexico";
+
+
+document.querySelector(".hero p").innerText =
+spanish
+?
+"Explora alquileres, vecindarios y comunidades locales en México."
+:
+"Explore rentals, neighborhoods, and local communities across Mexico.";
+
+
+button.innerHTML =
+spanish ? "🇺🇸 English" : "🇪🇸 Español";
+
+
+};
+
+
+
+console.log("🌼 Housing page loaded");
+
 
 </script>
 
-
-</div>
-
-</section>
-
-
-
-
-
-<section class="community">
-
-<h2 data-translate="help">
-❤️ Need More Help?
-</h2>
-
-
-<p>
-Connect with people who have already made the move.
-</p>
-
-
-<div class="buttons">
-
-<a href="community.html">
-🤝 Community
-</a>
-
-<a href="jobs.html">
-💼 Jobs
-</a>
-
-<a href="moving.html">
-🚚 Moving
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<footer>
-
-<h2>
-🌼 The Marigold Project
-</h2>
-
-<p>
-Built by community, for community.
-</p>
-
-</footer>
-
-
-
-<script src="../app.js"></script>
 
 
 </body>
