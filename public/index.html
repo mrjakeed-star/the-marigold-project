@@ -1,140 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
 
-  <title>The Marigold Project</title>
+    <!-- HEADER -->
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <header class="header">
+      <div class="logo">
+        🌼
 
-<body>
+        <div>
+          <h1 data-translate="title">The Marigold Project</h1>
 
-  <!-- HEADER -->
-  <header class="header">
-
-    <div class="logo">
-      🌼
-
-      <div>
-        <h1>The Marigold Project</h1>
-        <p>Your community in Mexico</p>
+          <p data-translate="tagline">Your community in Mexico</p>
+        </div>
       </div>
-    </div>
 
-    <div class="header-buttons">
-      <button id="language-toggle">🇪🇸 Español</button>
-      <button class="menu-button">☰</button>
-    </div>
+      <div class="header-buttons">
+        <button id="language-toggle">🇪🇸 Español</button>
 
-  </header>
+        <button class="menu-button">☰</button>
+      </div>
+    </header>
 
+    <!-- NAVIGATION -->
 
-  <!-- NAVIGATION -->
-  <nav class="menu">
-    <a href="#home">🏠 Home</a>
-    <a href="#help">🔎 Find Help</a>
-    <a href="#community">❤️ Community</a>
-    <a href="#mexico">🇲🇽 Mexico</a>
-  </nav>
+    <nav class="menu">
+      <a href="index.html"> 🏠 Home </a>
 
+      <a href="#help"> 🔎 Find Help </a>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+      <a href="pages/community.html"> ❤️ Community </a>
 
-    <h2>Welcome Home 🌼</h2>
+      <a href="states/all.html"> 🇲🇽 Mexico </a>
 
-    <h3>Starting over in Mexico is a big journey.</h3>
+      <a href="pages/profile.html"> 👤 Profile </a>
+    </nav>
 
-    <p>
-      Find answers, resources, jobs, housing, schools,
-      and people who understand your journey.
-    </p>
+    <!-- HERO -->
 
-    <div class="search">
-      <input id="search" type="search" placeholder="Search resources..." />
-      <button>🔎</button>
-    </div>
+    <section class="hero">
+      <h2 data-translate="welcome">Welcome Home 🌼</h2>
 
-  </section>
+      <h3>Starting over in Mexico is a big journey.</h3>
 
+      <p>
+        Find answers, resources, jobs, housing, schools, and people who
+        understand your journey.
+      </p>
 
-  <!-- HELP -->
-  <section id="help">
+      <div class="search">
+        <input id="search" type="search" placeholder="Search resources..." />
 
-    <h2>What do you need today?</h2>
+        <button>🔎</button>
+      </div>
+    </section>
 
-    <div class="cards">
+    <!-- QUICK HELP -->
 
-      <a href="#">
-        🏡
-        <h3>Moving to Mexico</h3>
-        <p>Planning your move</p>
-      </a>
+    <section id="help">
+      <h2>What do you need today?</h2>
 
-      <a href="#">
-        🏠
-        <h3>Housing</h3>
-        <p>Rent and homes</p>
-      </a>
+      <div class="cards">
+        <a href="pages/moving.html">
+          🏡
 
-      <a href="#">
-        💼
-        <h3>Jobs</h3>
-        <p>Work options</p>
-      </a>
+          <h3>Moving to Mexico</h3>
 
-      <a href="#">
-        👨‍👩‍👧
-        <h3>Family</h3>
-        <p>Schools and adjusting</p>
-      </a>
+          <p>Planning your move</p>
+        </a>
 
-    </div>
+        <a href="pages/housing.html">
+          🏠
 
-  </section>
+          <h3>Housing</h3>
 
+          <p>Rent, neighborhoods, homes</p>
+        </a>
 
-  <!-- COMMUNITY -->
-  <section id="community" class="community">
+        <a href="pages/jobs.html">
+          💼
 
-    <h2>You Are Not Alone ❤️</h2>
+          <h3>Jobs</h3>
 
-    <p>
-      Connect with families who have walked this path.
-    </p>
+          <p>Work and income options</p>
+        </a>
 
-  </section>
+        <a href="pages/family.html">
+          👨‍👩‍👧
 
+          <h3>Family & Kids</h3>
 
-  <!-- MEXICO -->
-  <section id="mexico">
+          <p>Schools and adjusting</p>
+        </a>
 
-    <h2>Explore Mexico 🇲🇽</h2>
+        <a href="pages/community.html">
+          🤝
 
-    <div class="states">
+          <h3>Community</h3>
 
-      <a href="#">🌊 Veracruz</a>
-      <a href="#">🌺 Oaxaca</a>
-      <a href="#">🌵 Jalisco</a>
-      <a href="#">🏝️ Yucatán</a>
+          <p>Meet people nearby</p>
+        </a>
 
-    </div>
+        <a href="pages/support.html">
+          🆘
 
-  </section>
+          <h3>Support</h3>
 
+          <p>Resources and assistance</p>
+        </a>
+      </div>
+    </section>
 
-  <footer>
+    <!-- RESOURCE CENTER -->
 
-    <h2>🌼 The Marigold Project</h2>
+    <section>
+      <h2>Resource Center</h2>
 
-    <p>Built by community, for community.</p>
+      <div class="cards">
+        <a href="pages/paperwork.html">
+          📄
 
-  </footer>
+          <h3>Paperwork</h3>
 
+          <p>Residency and documents</p>
+        </a>
 
-<script src="app.js"></script>
+        <a href="pages/money.html">
+          💰
 
-</body>
-</html>
+          <h3>Money</h3>
+
+          <p>Cost of living</p>
+        </a>
+
+        <a href="pages/healthcare.html">
+          🏥
+
+          <h3>Healthcare</h3>
+
+          <p>Doctors and medicine</p>
+        </a>
+
+        <a href="pages/education.html">
+          🎒
+
+          <h3>Education</h3>
+
+          <p>Schools and learning</p>
+        </a>
+
+        <a href="pages/pets.html">
+          🐶
+
+          <h3>Pets</h3>
+
+          <p>Moving animals</p>
+        </a>
+
+        <a href="pages/learn.html">
+          📚
+
+          <h3>Learn Mexico</h3>
+
+          <p>Culture and language</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+
+    <section class="community">
+      <h2>You Are Not Alone ❤️</h2>
+
+      <p>Connect with families who have walked this path.</p>
+
+      <div class="buttons">
+        <a href="pages/groups.html"> 👥 Groups </a>
+
+        <a href="pages/events.html"> 📅 Events </a>
+
+        <a href="pages/friends.html"> 🤝 Friends </a>
+      </div>
+    </section>
+
+    <!-- STATES -->
+
+    <section>
+      <h2>Explore Mexico 🇲🇽</h2>
+
+      <div class="states">
+        <a href="states/veracruz.html"> 🌊 Veracruz </a>
+
+        <a href="states/oaxaca.html"> 🌺 Oaxaca </a>
+
+        <a href="states/jalisco.html"> 🌵 Jalisco </a>
+
+        <a href="states/yucatan.html"> 🏝️ Yucatán </a>
+
+        <a href="states/baja.html"> 🌅 Baja California </a>
+
+        <a href="states/all.html"> 🇲🇽 All States </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <h2>🌼 The Marigold Project</h2>
+
+      <p>Built by community, for community.</p>
+    </footer>
+
+    <script src="app.js"></script>
