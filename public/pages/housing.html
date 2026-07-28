@@ -31,49 +31,41 @@
 
 
 .housing-grid {
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
-padding:40px 20px;
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:40px 20px;
 }
 
 
 .house-card {
-
-background:white;
-padding:30px;
-border-radius:30px;
-text-align:center;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.12);
-
-transition:.3s;
-
+  background:white;
+  padding:30px;
+  border-radius:30px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  transition:.3s;
 }
 
 
 .house-card:hover {
-
-transform:translateY(-10px);
-
+  transform:translateY(-10px);
 }
 
 
-.house-card .emoji {
-
-font-size:50px;
-
+.emoji {
+  font-size:50px;
 }
 
 
 .house-card h3 {
+  color:#b87400;
+  margin:15px;
+}
 
-color:#b87400;
-margin:15px;
 
+.house-card p {
+  color:#666;
 }
 
 
@@ -89,9 +81,9 @@ padding:12px 22px;
 
 border-radius:50px;
 
-font-weight:bold;
+margin-top:15px;
 
-margin-top:10px;
+font-weight:bold;
 
 }
 
@@ -101,7 +93,6 @@ margin-top:10px;
 background:#b87400;
 
 }
-
 
 </style>
 
@@ -136,7 +127,7 @@ background:#b87400;
 <h1>🏠 Housing in Mexico</h1>
 
 <p>
-Explore rentals, neighborhoods, and local communities across Mexico.
+Explore rentals, neighborhoods, and homes across Mexico.
 </p>
 
 </section>
@@ -145,7 +136,7 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 <section>
 
-<h2>🇲🇽 Find Housing By State</h2>
+<h2>🇲🇽 Find Housing Resources</h2>
 
 
 <div class="housing-grid">
@@ -153,81 +144,129 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 
 <div class="house-card">
+
+<div class="emoji">🏡</div>
+
+<h3>Mexico Rentals</h3>
+
+<p>Search homes and apartments throughout Mexico.</p>
+
+<a class="house-button" target="_blank" href="https://www.inmuebles24.com">
+🏠 Inmuebles24
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🏘️</div>
+
+<h3>More Rentals</h3>
+
+<p>Find houses, apartments, and local listings.</p>
+
+<a class="house-button" target="_blank" href="https://www.vivanuncios.com.mx">
+🔎 Vivanuncios
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
+<div class="emoji">💰</div>
+
+<h3>Budget Housing</h3>
+
+<p>Look for affordable homes and properties.</p>
+
+<a class="house-button" target="_blank" href="https://listado.mercadolibre.com.mx/inmuebles">
+🏠 Mercado Libre
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🌎</div>
+
+<h3>Community Housing</h3>
+
+<p>Connect with people moving to Mexico.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Mexico+housing+groups">
+🤝 Find Communities
+</a>
+
+</div>
+
+
+
+<div class="house-card">
+
 <div class="emoji">🌊</div>
+
 <h3>Veracruz</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+housing+Facebook+groups">
-🔎 Find Housing
+
+<p>Homes, rentals, and neighborhoods.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+rentals">
+🏠 Search Veracruz
 </a>
+
 </div>
 
 
 
 <div class="house-card">
+
 <div class="emoji">🌺</div>
+
 <h3>Oaxaca</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+housing+Facebook+groups">
-🔎 Find Housing
+
+<p>Homes, rentals, and neighborhoods.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+rentals">
+🏠 Search Oaxaca
 </a>
+
 </div>
 
 
 
 <div class="house-card">
+
 <div class="emoji">🌵</div>
+
 <h3>Jalisco</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+housing+Facebook+groups">
-🔎 Find Housing
+
+<p>Homes, rentals, and neighborhoods.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+rentals">
+🏠 Search Jalisco
 </a>
+
 </div>
 
 
 
 <div class="house-card">
+
 <div class="emoji">🏝️</div>
+
 <h3>Yucatán</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+housing+Facebook+groups">
-🔎 Find Housing
+
+<p>Homes, rentals, and neighborhoods.</p>
+
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+rentals">
+🏠 Search Yucatán
 </a>
-</div>
 
-
-
-<div class="house-card">
-<div class="emoji">🏠</div>
-<h3>Aguascalientes</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Aguascalientes+Mexico+housing+Facebook+groups">
-🔎 Find Housing
-</a>
-</div>
-
-
-
-<div class="house-card">
-<div class="emoji">🌅</div>
-<h3>Baja California</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Baja+California+Mexico+housing+Facebook+groups">
-🔎 Find Housing
-</a>
-</div>
-
-
-
-<div class="house-card">
-<div class="emoji">🏖️</div>
-<h3>Quintana Roo</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Quintana+Roo+Mexico+housing+Facebook+groups">
-🔎 Find Housing
-</a>
-</div>
-
-
-
-<div class="house-card">
-<div class="emoji">🏙️</div>
-<h3>Nuevo León</h3>
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Nuevo+Leon+Mexico+housing+Facebook+groups">
-🔎 Find Housing
-</a>
 </div>
 
 
@@ -246,13 +285,20 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 Connect with people who have already made the move.
 </p>
 
+
 <div class="buttons">
 
-<a href="community.html">🤝 Community</a>
+<a href="community.html">
+🤝 Community
+</a>
 
-<a href="jobs.html">💼 Jobs</a>
+<a href="jobs.html">
+💼 Jobs
+</a>
 
-<a href="moving.html">🚚 Moving</a>
+<a href="moving.html">
+🚚 Moving
+</a>
 
 </div>
 
