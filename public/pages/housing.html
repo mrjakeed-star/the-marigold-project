@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,115 +10,254 @@
 
 <style>
 
-body {
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#fff9ef;
-    color:#3d3428;
-}
-
-.header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
-
-.logo {
-    display:flex;
-    gap:15px;
-    align-items:center;
-}
-
-.logo h1 {
-    margin:0;
-    color:#b87400;
-}
-
-.logo p {
-    margin:3px;
-    color:#777;
-}
-
-button {
-    background:#e7a51b;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:50px;
-    cursor:pointer;
-    font-weight:bold;
+*{
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
 }
 
 
-.back-home {
-    padding:20px;
-}
-
-.back-home a {
-    background:#e7a51b;
-    color:white;
-    padding:12px 22px;
-    border-radius:50px;
-    text-decoration:none;
+body{
+margin:0;
+background:#fff9ef;
+color:#3d3428;
 }
 
 
 
-.hero {
-    text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#fff0c4,#fff9ef);
-}
+/* STICKY HEADER */
 
-.hero h2 {
-    color:#b87400;
-    font-size:42px;
-}
+.header{
 
+position:sticky;
+top:0;
+z-index:1000;
 
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-section {
-    padding:30px 20px;
-}
-
-
-section h2 {
-    text-align:center;
-    color:#b87400;
-}
-
-
-
-.housing-grid {
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
-
-}
-
-
-
-.house-card {
+padding:18px 25px;
 
 background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+}
+
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+
+.logo-icon{
+
+font-size:40px;
+
+}
+
+
+.logo h1{
+
+margin:0;
+
+font-size:24px;
+
+color:#b87400;
+
+}
+
+
+.logo p{
+
+margin:2px 0;
+
+color:#777;
+
+}
+
+
+
+
+#translate{
+
+background:#e7a51b;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+#translate:hover{
+
+background:#b87400;
+
+transform:scale(1.05);
+
+}
+
+
+
+
+
+/* BACK BUTTON */
+
+
+.back{
+
 padding:25px;
-border-radius:25px;
+
+}
+
+
+.back a{
+
+background:#e7a51b;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+.back a:hover{
+
+background:#b87400;
+
+}
+
+
+
+
+
+/* HERO */
+
+
+.hero{
+
 text-align:center;
+
+padding:70px 20px;
+
+background:linear-gradient(
+135deg,
+#fff0c4,
+#fff9ef
+);
+
+}
+
+
+.hero h2{
+
+font-size:42px;
+
+color:#b87400;
+
+margin-bottom:15px;
+
+}
+
+
+.hero p{
+
+font-size:18px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+
+
+
+
+/* CARDS */
+
+
+section{
+
+padding:40px 20px;
+
+}
+
+
+section h2{
+
+text-align:center;
+
+color:#b87400;
+
+font-size:32px;
+
+margin-bottom:30px;
+
+}
+
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(230px,1fr));
+
+gap:22px;
+
+}
+
+
+
+
+.card{
+
+background:white;
+
+border-radius:25px;
+
+padding:25px;
+
+text-align:center;
+
 box-shadow:0 8px 25px rgba(0,0,0,.12);
 
 opacity:0;
+
 transform:translateY(30px);
+
 transition:.5s;
 
 }
 
 
-
-.house-card:hover {
+.card:hover{
 
 transform:translateY(-10px);
 
@@ -125,7 +265,7 @@ transform:translateY(-10px);
 
 
 
-.emoji {
+.emoji{
 
 font-size:45px;
 
@@ -133,7 +273,7 @@ font-size:45px;
 
 
 
-.house-card h3 {
+.card h3{
 
 color:#b87400;
 
@@ -141,49 +281,124 @@ color:#b87400;
 
 
 
-.house-button {
+.card p{
+
+color:#666;
+
+}
+
+
+
+.card a{
 
 display:inline-block;
+
 margin-top:15px;
-padding:12px 20px;
+
 background:#e7a51b;
+
 color:white;
+
+padding:12px 20px;
+
 border-radius:50px;
+
 text-decoration:none;
+
 font-weight:bold;
 
 }
 
 
 
-.community {
 
-background:#fce4dd;
-text-align:center;
+.card a:hover{
+
+background:#b87400;
 
 }
 
 
 
-.buttons a {
+
+/* COMMUNITY */
+
+
+.community{
+
+background:#fce4dd;
+
+text-align:center;
+
+}
+
+
+.community a{
 
 display:inline-block;
+
 background:white;
+
 padding:15px 25px;
-border-radius:50px;
+
 margin:10px;
+
+border-radius:50px;
+
 text-decoration:none;
 
 }
 
 
 
-footer {
+
+
+footer{
 
 background:#342b20;
+
 color:white;
+
 text-align:center;
+
 padding:35px;
+
+}
+
+
+footer h2{
+
+color:#ffd66d;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.logo h1{
+
+font-size:18px;
+
+}
+
+
+.hero h2{
+
+font-size:32px;
+
+}
+
+
+.header{
+
+padding:15px;
+
+}
+
 
 }
 
@@ -197,63 +412,89 @@ padding:35px;
 <body>
 
 
+
 <header class="header">
 
 
 <div class="logo">
 
+
+<div class="logo-icon">
 🌼
+</div>
+
 
 <div>
 
-<h1 id="title">
+<h1 id="name">
 The Marigold Project
 </h1>
 
-<p id="tagline">
+
+<p id="tag">
 Your community in Mexico
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 
 <button id="translate">
+
 🇪🇸 Español
+
 </button>
+
 
 
 </header>
 
 
 
-<div class="back-home">
+
+
+<div class="back">
+
 
 <a href="../index.html">
 
-← 🌼 <span id="back">
+← 🌼 <span id="backText">
 Back to Home
 </span>
 
 </a>
+
 
 </div>
 
 
 
 
+
 <section class="hero">
 
-<h2 id="housingTitle">
+
+<h2 id="title">
+
 🏠 Housing in Mexico
+
 </h2>
 
-<p id="description">
+
+<p id="desc">
+
 Explore rentals, neighborhoods, and local communities across Mexico.
+
 </p>
 
+
 </section>
+
+
 
 
 
@@ -261,15 +502,19 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 <section>
 
 
-<h2 id="findTitle">
+<h2 id="find">
+
 🇲🇽 Find Housing By State
+
 </h2>
 
 
-<div class="housing-grid" id="cards"></div>
+<div class="grid" id="cards"></div>
 
 
 </section>
+
+
 
 
 
@@ -277,30 +522,36 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 <section class="community">
 
+
 <h2 id="help">
+
 ❤️ Need More Help?
+
 </h2>
 
+
 <p id="helpText">
+
 Connect with people who have already made the move.
+
 </p>
 
 
-<div class="buttons">
 
 <a href="community.html">
 🤝 Community
 </a>
 
+
 <a href="jobs.html">
 💼 Jobs
 </a>
+
 
 <a href="moving.html">
 🚚 Moving
 </a>
 
-</div>
 
 
 </section>
@@ -308,17 +559,22 @@ Connect with people who have already made the move.
 
 
 
+
 <footer>
+
 
 <h2>
 🌼 The Marigold Project
 </h2>
 
+
 <p>
 Built by community, for community.
 </p>
 
+
 </footer>
+
 
 
 
@@ -365,45 +621,53 @@ const states=[
 ];
 
 
+
 let spanish=false;
 
 
 
-function loadCards(){
+function makeCards(){
+
 
 let box=document.getElementById("cards");
+
 
 box.innerHTML="";
 
 
-states.forEach(state=>{
+states.forEach(s=>{
 
 
-box.innerHTML += `
+box.innerHTML+=`
 
-<div class="house-card">
+<div class="card">
+
 
 <div class="emoji">
-${state[0]}
+
+${s[0]}
+
 </div>
 
+
 <h3>
-${state[1]}
+
+${s[1]}
+
 </h3>
 
 
 <p>
 
-${spanish 
+${spanish
 ?"Encuentra casas, alquileres y vecindarios."
 :"Find homes, rentals, and neighborhoods."}
 
 </p>
 
 
-<a class="house-button"
-target="_blank"
-href="https://www.google.com/search?q=${encodeURIComponent(state[1]+" Mexico housing")}">
+<a target="_blank"
+href="https://www.google.com/search?q=${encodeURIComponent(s[1]+" Mexico housing")}">
 
 ${spanish
 ?"🏠 Buscar Vivienda"
@@ -416,6 +680,7 @@ ${spanish
 
 `;
 
+
 });
 
 
@@ -426,18 +691,21 @@ animate();
 
 
 
+
 function animate(){
 
-document.querySelectorAll(".house-card")
-.forEach(card=>{
+
+document.querySelectorAll(".card")
+.forEach((c,i)=>{
 
 
 setTimeout(()=>{
 
-card.style.opacity="1";
-card.style.transform="translateY(0)";
+c.style.opacity="1";
 
-},100);
+c.style.transform="translateY(0)";
+
+},i*40);
 
 
 });
@@ -448,43 +716,36 @@ card.style.transform="translateY(0)";
 
 
 
+
 document.getElementById("translate").onclick=function(){
 
 
 spanish=!spanish;
 
 
+name.innerText =
+spanish ? "El Proyecto Marigold":"The Marigold Project";
+
+
+tag.innerText =
+spanish ? "Tu comunidad en México":"Your community in Mexico";
+
+
+backText.innerText =
+spanish ? "Volver al Inicio":"Back to Home";
+
+
 title.innerText =
-spanish
-?"El Proyecto Marigold"
-:"The Marigold Project";
+spanish ? "🏠 Vivienda en México":"🏠 Housing in Mexico";
 
 
-tagline.innerText =
-spanish
-?"Tu comunidad en México"
-:"Your community in Mexico";
-
-
-back.innerText =
-spanish
-?"Volver al Inicio"
-:"Back to Home";
-
-
-housingTitle.innerText =
-spanish
-?"🏠 Vivienda en México"
-:"🏠 Housing in Mexico";
-
-
-description.innerText =
+desc.innerText =
 spanish
 ?"Explora alquileres, vecindarios y comunidades locales en México."
-:"Explore rentals, neighborhoods, and local communities across Mexico";
+:"Explore rentals, neighborhoods, and local communities across Mexico.";
 
 
-findTitle.innerText =
+find.innerText =
 spanish
 ?"🇲🇽 Buscar Vivienda por Estado"
 :"🇲🇽 Find Housing By State";
@@ -508,14 +769,15 @@ spanish
 :"🇪🇸 Español";
 
 
-loadCards();
+
+makeCards();
 
 
 };
 
 
 
-loadCards();
+makeCards();
 
 
 </script>
