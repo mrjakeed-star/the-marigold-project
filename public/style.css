@@ -1,7 +1,8 @@
 /* =====================================
-   THE MARIGOLD PROJECT
+   🌼 THE MARIGOLD PROJECT
    Main Stylesheet
 ===================================== */
+
 
 /* RESET */
 
@@ -11,431 +12,704 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-
+  font-family: "Segoe UI", Arial, sans-serif;
   background: #fff9ef;
-
   color: #3d3428;
-
   line-height: 1.6;
+  transition: .4s;
 }
 
-/* COLORS */
 
 :root {
-  --gold: #e7a51b;
 
-  --gold-dark: #b87400;
+  --gold:#e7a51b;
+  --gold-dark:#b87400;
+  --cream:#fff1c9;
+  --green:#79a94b;
+  --pink:#fce4dd;
+  --white:#ffffff;
+  --shadow:0 10px 30px rgba(0,0,0,.12);
 
-  --cream: #fff1c9;
-
-  --green: #79a94b;
-
-  --soft-green: #eaf5df;
-
-  --pink: #fce4dd;
-
-  --white: #ffffff;
-
-  --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* LINKS */
 
 a {
-  text-decoration: none;
-
-  color: inherit;
+  text-decoration:none;
+  color:inherit;
 }
 
-/* ===========================
-HEADER
-=========================== */
+
+
+
+
+/* =====================
+ HEADER
+===================== */
+
 
 .header {
-  position: sticky;
 
-  top: 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
 
-  z-index: 1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-  background: white;
+  padding:15px 25px;
 
-  display: flex;
+  background:white;
 
-  justify-content: space-between;
+  box-shadow:var(--shadow);
 
-  align-items: center;
-
-  padding: 15px 20px;
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
+
 
 .logo {
-  display: flex;
 
-  align-items: center;
+  display:flex;
+  align-items:center;
+  gap:12px;
 
-  gap: 10px;
 }
 
-.logo:first-letter {
-  font-size: 35px;
+
+.flower {
+
+  font-size:40px;
+
+  animation:
+
+  floatFlower 3s infinite ease-in-out;
+
 }
+
+
+
+@keyframes floatFlower {
+
+  0%,100% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(-8px) rotate(5deg);
+  }
+
+}
+
+
 
 .logo h1 {
-  color: var(--gold-dark);
 
-  font-size: 20px;
+  color:var(--gold-dark);
+  font-size:24px;
+
 }
+
 
 .logo p {
-  color: #777;
 
-  font-size: 12px;
+  color:#777;
+  font-size:13px;
+
 }
+
+
 
 .header-buttons {
-  display: flex;
 
-  gap: 10px;
+  display:flex;
+  gap:10px;
+
 }
 
-.header-buttons button {
-  border: none;
 
-  background: var(--cream);
+button {
 
-  padding: 10px 14px;
+  border:none;
+  cursor:pointer;
 
-  border-radius: 50px;
+  padding:10px 16px;
 
-  cursor: pointer;
+  border-radius:50px;
 
-  font-weight: bold;
+  background:var(--cream);
+
+  font-weight:bold;
+
+  transition:.3s;
+
 }
 
-.menu-button {
-  font-size: 20px;
+
+button:hover {
+
+  transform:scale(1.08);
+
 }
 
-/* ===========================
-NAVIGATION
-=========================== */
+
+
+
+
+
+/* =====================
+ NAVIGATION
+===================== */
+
 
 .menu {
-  display: flex;
 
-  justify-content: center;
+  display:flex;
+  justify-content:center;
 
-  gap: 15px;
+  gap:15px;
 
-  padding: 15px;
+  padding:15px;
 
-  background: white;
+  background:white;
+
 }
+
 
 .menu a {
-  padding: 10px 15px;
 
-  border-radius: 20px;
+  padding:10px 18px;
 
-  font-weight: 600;
+  border-radius:25px;
+
+  font-weight:bold;
+
+  transition:.3s;
+
 }
+
 
 .menu a:hover {
-  background: var(--cream);
+
+  background:var(--cream);
+
+  transform:translateY(-3px);
+
 }
 
-/* ===========================
-HERO
-=========================== */
+
+
+
+
+
+
+/* =====================
+ HERO
+===================== */
+
 
 .hero {
-  text-align: center;
 
-  padding: 60px 20px;
+  min-height:500px;
 
-  background: linear-gradient(135deg, #fff0c4, #fff9ef);
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:60px 20px;
+
+
+  background:
+
+  linear-gradient(
+
+  135deg,
+
+  #fff0c4,
+
+  #fff9ef
+
+  );
+
 }
+
+
+
+.hero-content {
+
+  animation:
+
+  fadeUp 1s ease;
+
+}
+
+
 
 .hero h2 {
-  font-size: 42px;
 
-  color: var(--gold-dark);
+  font-size:50px;
 
-  margin-bottom: 10px;
+  color:var(--gold-dark);
+
 }
+
+
 
 .hero h3 {
-  font-size: 22px;
 
-  margin-bottom: 20px;
+  font-size:24px;
+
+  margin:15px;
+
 }
+
+
 
 .hero p {
-  max-width: 650px;
 
-  margin: auto;
+  max-width:700px;
 
-  font-size: 17px;
+  margin:auto;
+
+  font-size:18px;
+
 }
+
+
+
+
 
 /* SEARCH */
 
+
 .search {
-  margin: 35px auto 0;
 
-  max-width: 600px;
+  display:flex;
 
-  display: flex;
+  gap:10px;
 
-  gap: 10px;
+  max-width:600px;
+
+  margin:35px auto;
+
 }
+
 
 .search input {
-  flex: 1;
 
-  padding: 17px;
+  flex:1;
 
-  border-radius: 25px;
+  padding:18px;
 
-  border: 2px solid #e8d39b;
+  border-radius:30px;
 
-  font-size: 16px;
+  border:2px solid #e8d39b;
+
+  font-size:16px;
+
 }
+
+
 
 .search button {
-  width: 60px;
 
-  border: none;
+  background:var(--gold);
 
-  border-radius: 25px;
+  color:white;
 
-  background: var(--gold);
-
-  color: white;
-
-  font-size: 20px;
 }
 
-/* ===========================
-SECTIONS
-=========================== */
+
+
+
+
+
+
+/* =====================
+ SECTIONS
+===================== */
+
 
 section {
-  padding: 50px 20px;
+
+  padding:60px 20px;
+
 }
+
+
 
 section h2 {
-  text-align: center;
 
-  color: var(--gold-dark);
+  text-align:center;
 
-  font-size: 32px;
+  color:var(--gold-dark);
 
-  margin-bottom: 30px;
+  font-size:34px;
+
+  margin-bottom:35px;
+
 }
 
-/* ===========================
-CARDS
-=========================== */
+
+
+
+
+
+
+/* =====================
+ CARDS
+===================== */
+
 
 .cards {
-  display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display:grid;
 
-  gap: 20px;
+  grid-template-columns:
+
+  repeat(auto-fit,minmax(230px,1fr));
+
+  gap:25px;
+
 }
+
+
 
 .cards a {
-  background: white;
 
-  padding: 25px;
+  position:relative;
 
-  border-radius: 25px;
+  background:white;
 
-  text-align: center;
+  padding:30px;
 
-  box-shadow: var(--shadow);
+  text-align:center;
 
-  transition: 0.3s;
+  border-radius:30px;
+
+  box-shadow:var(--shadow);
+
+  transition:.35s;
+
+  animation:fadeUp .8s;
+
 }
+
+
 
 .cards a:hover {
-  transform: translateY(-5px);
+
+  transform:
+
+  translateY(-12px)
+
+  scale(1.03);
+
+
+  box-shadow:
+
+  0 15px 40px rgba(231,165,27,.35);
+
 }
+
+
 
 .cards h3 {
-  color: var(--gold-dark);
 
-  margin: 10px 0;
+  color:var(--gold-dark);
+
+  margin:10px;
+
 }
+
+
 
 .cards p {
-  color: #666;
 
-  font-size: 15px;
+  color:#666;
+
 }
 
-/* ===========================
-COMMUNITY
-=========================== */
+
+
+
+
+
+/* =====================
+ COMMUNITY
+===================== */
+
 
 .community {
-  background: var(--pink);
 
-  text-align: center;
+  background:var(--pink);
+
+  text-align:center;
+
 }
+
+
 
 .buttons {
-  display: flex;
 
-  justify-content: center;
+  display:flex;
 
-  flex-wrap: wrap;
+  justify-content:center;
 
-  gap: 15px;
+  gap:15px;
+
+  flex-wrap:wrap;
+
 }
+
+
 
 .buttons a {
-  background: white;
 
-  padding: 18px 25px;
+  background:white;
 
-  border-radius: 50px;
+  padding:18px 30px;
 
-  box-shadow: var(--shadow);
+  border-radius:50px;
 
-  font-weight: bold;
+  box-shadow:var(--shadow);
+
+  transition:.3s;
+
 }
 
-/* ===========================
-STATES
-=========================== */
+
+
+.buttons a:hover {
+
+  transform:scale(1.1);
+
+}
+
+
+
+
+
+
+
+/* =====================
+ STATES
+===================== */
+
 
 .states {
-  display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display:grid;
 
-  gap: 15px;
+  grid-template-columns:
+
+  repeat(auto-fit,minmax(150px,1fr));
+
+  gap:20px;
+
 }
+
+
 
 .states a {
-  background: var(--soft-green);
 
-  padding: 20px;
+  background:#eaf5df;
 
-  border-radius: 20px;
+  padding:25px;
 
-  text-align: center;
+  border-radius:25px;
 
-  font-weight: bold;
+  text-align:center;
+
+  font-weight:bold;
+
+  transition:.3s;
+
 }
 
-/* ===========================
-FOOTER
-=========================== */
+
+
+.states a:hover {
+
+  transform:
+
+  rotate(2deg)
+
+  scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* =====================
+ FOOTER
+===================== */
+
 
 footer {
-  background: #342b20;
 
-  color: white;
+  background:#342b20;
 
-  text-align: center;
+  color:white;
 
-  padding: 50px 20px;
+  text-align:center;
+
+  padding:60px 20px;
+
 }
+
 
 footer h2 {
-  color: #ffd66d;
+
+  color:#ffd66d;
+
 }
 
-/* ===========================
-MOBILE IMPROVEMENTS
-=========================== */
 
-@media (max-width: 700px) {
-  .menu {
-    overflow-x: auto;
 
-    justify-content: flex-start;
+
+
+
+
+/* =====================
+ ANIMATIONS
+===================== */
+
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
   }
 
-  .menu a {
-    white-space: nowrap;
 
-    background: var(--cream);
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
   }
 
-  .hero h2 {
-    font-size: 34px;
-  }
-
-  .hero h3 {
-    font-size: 20px;
-  }
-
-  .search {
-    flex-direction: column;
-  }
-
-  .search button {
-    width: 100%;
-
-    padding: 15px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .cards a {
-    padding: 30px 20px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons a {
-    width: 100%;
-  }
-
-  .states {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-/* ===========================
-DARK MODE SUPPORT
-=========================== */
+
+
+
+
+
+/* =====================
+ DARK MODE
+===================== */
+
 
 .dark {
-  background: #171717;
 
-  color: white;
+  background:#171717;
+
+  color:white;
+
 }
+
+
 
 .dark .header,
 .dark .menu,
 .dark .cards a {
-  background: #252525;
+
+  background:#252525;
+
 }
+
+
 
 .dark .cards p {
-  color: #ddd;
+
+  color:#ddd;
+
 }
 
+
+
+.dark h1,
 .dark h2,
 .dark h3 {
-  color: #ffd66d;
+
+  color:#ffd66d;
+
+}
+
+
+
+
+
+
+/* =====================
+ MOBILE
+===================== */
+
+
+@media(max-width:700px){
+
+
+.header {
+
+  flex-direction:column;
+
+  gap:15px;
+
+}
+
+
+
+.menu {
+
+  overflow-x:auto;
+
+  justify-content:flex-start;
+
+}
+
+
+
+.hero h2 {
+
+  font-size:36px;
+
+}
+
+
+
+.search {
+
+  flex-direction:column;
+
+}
+
+
+
+.cards {
+
+  grid-template-columns:1fr;
+
+}
+
+
 }
