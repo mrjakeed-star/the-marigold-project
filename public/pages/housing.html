@@ -1,154 +1,118 @@
-import type { Route } from "./+types/housing";
+<!DOCTYPE html>
+<html lang="en">
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "Housing | The Marigold Project" },
-    {
-      name: "description",
-      content: "Find housing and communities across Mexico.",
-    },
-  ];
-}
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const states = [
-  ["🏠", "Aguascalientes"],
-  ["🌊", "Baja California"],
-  ["🌅", "Baja California Sur"],
-  ["🌴", "Campeche"],
-  ["🌿", "Chiapas"],
-  ["🐺", "Chihuahua"],
-  ["🏜️", "Coahuila"],
-  ["🌋", "Colima"],
-  ["🤠", "Durango"],
-  ["🏘️", "Guanajuato"],
-  ["🌊", "Guerrero"],
-  ["⛰️", "Hidalgo"],
-  ["🌵", "Jalisco"],
-  ["🏙️", "Estado de Mexico"],
-  ["🌺", "Michoacan"],
-  ["🌸", "Morelos"],
-  ["🏝️", "Nayarit"],
-  ["🏢", "Nuevo Leon"],
-  ["🌺", "Oaxaca"],
-  ["🏛️", "Puebla"],
-  ["🏡", "Queretaro"],
-  ["🏖️", "Quintana Roo"],
-  ["🌵", "San Luis Potosi"],
-  ["🌵", "Sinaloa"],
-  ["☀️", "Sonora"],
-  ["🌴", "Tabasco"],
-  ["🌊", "Tamaulipas"],
-  ["🏡", "Tlaxcala"],
-  ["🌊", "Veracruz"],
-  ["🏝️", "Yucatan"],
-  ["⛰️", "Zacatecas"],
-];
+<title>🏠 Housing | The Marigold Project</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
 
 
-function facebookLink(state: string) {
-  return `https://www.facebook.com/groups/search/groups/?q=${encodeURIComponent(
-    state + " Mexico"
-  )}`;
-}
+<body>
 
 
-export default function Housing() {
-  return (
-    <>
+<header class="header">
 
-      <section className="hero">
+<div class="logo">
 
-        <h2>🏠 Housing in Mexico 🌼</h2>
+🌼
 
-        <h3>
-          Find a place to call home
-        </h3>
+<div>
+<h1>The Marigold Project</h1>
+<p>Your community in Mexico 🇲🇽</p>
+</div>
 
-        <p>
-          Explore rentals, neighborhoods, and local communities across Mexico.
-        </p>
+</div>
 
-      </section>
+</header>
 
 
 
-      <section>
+<section class="hero">
 
-        <h2>
-          🇲🇽 Find Housing By State
-        </h2>
+<h2>🏠 Housing in Mexico</h2>
 
+<h3>Find your next home</h3>
 
-        <div className="cards">
+<p>
+Find housing groups, neighborhoods, and resources across Mexico.
+</p>
 
-          {states.map(([emoji, state]) => (
-
-            <a
-              key={state}
-              href={facebookLink(state)}
-              target="_blank"
-              rel="noreferrer"
-            >
-
-              <div style={{
-                fontSize: "45px",
-                marginBottom: "10px"
-              }}>
-                {emoji}
-              </div>
-
-
-              <h3>
-                {state}
-              </h3>
-
-
-              <p>
-                🏠 Find Facebook Housing Groups
-              </p>
-
-
-            </a>
-
-          ))}
-
-        </div>
-
-      </section>
+</section>
 
 
 
-      <section className="community">
 
-        <h2>
-          ❤️ Need More Help?
-        </h2>
+<section>
 
-        <p>
-          Connect with people who have already made the move.
-        </p>
+<h2>🇲🇽 Housing By State</h2>
 
 
-        <div className="buttons">
-
-          <a href="/community">
-            🤝 Community
-          </a>
-
-          <a href="/jobs">
-            💼 Jobs
-          </a>
-
-          <a href="/moving">
-            🚚 Moving
-          </a>
-
-        </div>
-
-      </section>
+<div class="cards">
 
 
-    </>
-  );
-}
+<a href="https://www.facebook.com/groups/search/groups/?q=Aguascalientes+Mexico" target="_blank">
+🏠
+<h3>Aguascalientes</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+<a href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Mexico" target="_blank">
+🌊
+<h3>Baja California</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+<a href="https://www.facebook.com/groups/search/groups/?q=Jalisco+Mexico" target="_blank">
+🌵
+<h3>Jalisco</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+<a href="https://www.facebook.com/groups/search/groups/?q=Oaxaca+Mexico" target="_blank">
+🌺
+<h3>Oaxaca</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+<a href="https://www.facebook.com/groups/search/groups/?q=Veracruz+Mexico" target="_blank">
+🌊
+<h3>Veracruz</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+<a href="https://www.facebook.com/groups/search/groups/?q=Yucatan+Mexico" target="_blank">
+🏝️
+<h3>Yucatán</h3>
+<p>Find Housing Groups</p>
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<h2>🌼 The Marigold Project</h2>
+
+<p>Built by community, for community ❤️</p>
+
+</footer>
+
+
+</body>
+
+</html>
