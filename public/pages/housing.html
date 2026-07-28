@@ -13,7 +13,8 @@
 <style>
 
 .back-home {
-  padding: 20px;
+  padding:20px;
+  background:#fff9ef;
 }
 
 .back-home a {
@@ -30,7 +31,6 @@
   background:#b87400;
   transform:translateX(-5px);
 }
-
 
 
 .housing-hero {
@@ -55,11 +55,11 @@ color:#b87400;
 
 .housing-hero p {
 
-font-size:18px;
-
-max-width:650px;
+max-width:700px;
 
 margin:auto;
+
+font-size:18px;
 
 }
 
@@ -105,43 +105,39 @@ transform:translateY(-8px);
 }
 
 
-
-.house-card .emoji {
+.emoji {
 
 font-size:45px;
 
 }
 
 
-
 .house-card h3 {
 
 color:#b87400;
 
-margin:10px;
+margin:15px;
 
 }
-
 
 
 .house-button {
 
 display:inline-block;
 
-margin-top:15px;
-
-padding:12px 20px;
-
 background:#e7a51b;
 
 color:white;
+
+padding:12px 20px;
 
 border-radius:50px;
 
 font-weight:bold;
 
-}
+margin-top:10px;
 
+}
 
 
 .house-button:hover {
@@ -149,7 +145,6 @@ font-weight:bold;
 background:#b87400;
 
 }
-
 
 
 @keyframes fade {
@@ -172,11 +167,9 @@ transform:translateY(0);
 
 }
 
-
 </style>
 
 </head>
-
 
 
 <body>
@@ -202,6 +195,8 @@ transform:translateY(0);
 
 
 
+<!-- BACK BUTTON -->
+
 <div class="back-home">
 
 <a href="../index.html">
@@ -219,18 +214,14 @@ transform:translateY(0);
 <h1>🏠 Housing in Mexico</h1>
 
 <p>
-
 Explore rentals, neighborhoods, and local communities across Mexico.
-
 </p>
 
 </section>
 
 
 
-
 <section>
-
 
 <h2>🇲🇽 Find Housing By State</h2>
 
@@ -239,15 +230,64 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 
 
+<!-- STATE CARDS -->
+
+<script>
+
+const states = [
+
+["🏡","Aguascalientes"],
+["🌊","Baja California"],
+["🌅","Baja California Sur"],
+["🌴","Campeche"],
+["🌿","Chiapas"],
+["🐺","Chihuahua"],
+["⛰️","Coahuila"],
+["🌺","Colima"],
+["🌵","Durango"],
+["🏘️","Guanajuato"],
+["🌊","Guerrero"],
+["🏔️","Hidalgo"],
+["🌵","Jalisco"],
+["🏙️","Estado de Mexico"],
+["🌲","Michoacan"],
+["🌸","Morelos"],
+["🌊","Nayarit"],
+["🏙️","Nuevo Leon"],
+["🌺","Oaxaca"],
+["🏛️","Puebla"],
+["🏡","Queretaro"],
+["🏝️","Quintana Roo"],
+["🌄","San Luis Potosi"],
+["🌊","Sinaloa"],
+["☀️","Sonora"],
+["🌿","Tabasco"],
+["🌊","Tamaulipas"],
+["🌸","Tlaxcala"],
+["🌊","Veracruz"],
+["🏝️","Yucatan"],
+["⛰️","Zacatecas"]
+
+];
+
+
+document.write(
+
+states.map(state => `
+
 <div class="house-card">
 
-<div class="emoji">🌊</div>
+<div class="emoji">${state[0]}</div>
 
-<h3>Veracruz</h3>
+<h3>${state[1]}</h3>
 
-<p>Find homes, rentals, and local housing.</p>
+<p>
+Find homes, rentals, and local housing.
+</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+housing">
+<a class="house-button"
+target="_blank"
+href="https://www.google.com/search?q=${state[1]}+Mexico+housing">
 
 🏠 Find Housing
 
@@ -255,96 +295,11 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 </div>
 
+`).join("")
 
+);
 
-<div class="house-card">
-
-<div class="emoji">🌺</div>
-
-<h3>Oaxaca</h3>
-
-<p>Find homes, rentals, and local housing.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+housing">
-
-🏠 Find Housing
-
-</a>
-
-</div>
-
-
-
-<div class="house-card">
-
-<div class="emoji">🌵</div>
-
-<h3>Jalisco</h3>
-
-<p>Find homes, rentals, and local housing.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+housing">
-
-🏠 Find Housing
-
-</a>
-
-</div>
-
-
-
-<div class="house-card">
-
-<div class="emoji">🏝️</div>
-
-<h3>Yucatán</h3>
-
-<p>Find homes, rentals, and local housing.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+housing">
-
-🏠 Find Housing
-
-</a>
-
-</div>
-
-
-
-<div class="house-card">
-
-<div class="emoji">🏡</div>
-
-<h3>Aguascalientes</h3>
-
-<p>Find homes, rentals, and local housing.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Aguascalientes+Mexico+housing">
-
-🏠 Find Housing
-
-</a>
-
-</div>
-
-
-
-<div class="house-card">
-
-<div class="emoji">🌅</div>
-
-<h3>Baja California</h3>
-
-<p>Find homes, rentals, and local housing.</p>
-
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Baja+California+Mexico+housing">
-
-🏠 Find Housing
-
-</a>
-
-</div>
-
+</script>
 
 
 </div>
@@ -358,22 +313,28 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 <h2>❤️ Need More Help?</h2>
 
-<p>Connect with people who have already made the move.</p>
+<p>
+Connect with people who have already made the move.
+</p>
 
 
 <div class="buttons">
 
-<a href="community.html">🤝 Community</a>
+<a href="community.html">
+🤝 Community
+</a>
 
-<a href="jobs.html">💼 Jobs</a>
+<a href="jobs.html">
+💼 Jobs
+</a>
 
-<a href="moving.html">🚚 Moving</a>
+<a href="moving.html">
+🚚 Moving
+</a>
 
 </div>
 
-
 </section>
-
 
 
 
@@ -381,7 +342,9 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 <h2>🌼 The Marigold Project</h2>
 
-<p>Built by community, for community.</p>
+<p>
+Built by community, for community.
+</p>
 
 </footer>
 
