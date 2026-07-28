@@ -1,135 +1,329 @@
-// THE MARIGOLD PROJECT
-// Main JavaScript
+/* =====================================
+   THE MARIGOLD PROJECT
+   App JavaScript
+===================================== */
 
+/* =====================================
+   MOBILE MENU
+===================================== */
 
-// MOBILE MENU
-
-const menuButton = document.querySelector(".menu-button");
-const menu = document.querySelector(".menu");
+const menuButton = document.querySelector('.menu-button');
+const menu = document.querySelector('.menu');
 
 if (menuButton && menu) {
-  menuButton.addEventListener("click", () => {
-    menu.classList.toggle("show");
+  menuButton.addEventListener('click', () => {
+    menu.classList.toggle('show');
   });
 }
 
+/* =====================================
+   LANGUAGE SYSTEM
+===================================== */
 
-// LANGUAGE BUTTON
+const languageButton = document.querySelector('#language-toggle');
 
-const languageButton = document.querySelector("#language-toggle");
+const translations = {
+  'The Marigold Project': 'El Proyecto Marigold',
 
-let spanish = false;
+  'Your community in Mexico': 'Tu comunidad en México',
+
+  'Welcome Home 🌼': 'Bienvenido a Casa 🌼',
+
+  'Starting over in Mexico is a big journey.':
+    'Comenzar de nuevo en México es un gran viaje.',
+
+  'What do you need today?': '¿Qué necesitas hoy?',
+
+  'Moving to Mexico': 'Mudarse a México',
+
+  Housing: 'Vivienda',
+
+  Jobs: 'Trabajo',
+
+  'Family & Kids': 'Familia e Hijos',
+
+  Community: 'Comunidad',
+
+  Support: 'Apoyo',
+
+  'Resource Center': 'Centro de Recursos',
+
+  Paperwork: 'Documentos',
+
+  Money: 'Dinero',
+
+  Healthcare: 'Salud',
+
+  Education: 'Educación',
+
+  Pets: 'Mascotas',
+
+  'Learn Mexico': 'Aprender México',
+
+  'You Are Not Alone ❤️': 'No Estás Solo ❤️',
+
+  'Explore Mexico 🇲🇽': 'Explora México 🇲🇽',
+
+  Home: 'Inicio',
+
+  Profile: 'Perfil',
+
+  'Find Help': 'Buscar Ayuda',
+};
+
+function translatePage() {
+  document.querySelectorAll('h1,h2,h3,p,a,button').forEach((element) => {
+    let text = element.innerText.trim();
+
+    if (translations[text]) {
+      element.innerText = translations[text];
+    }
+  });
+
+  if (languageButton) {
+    languageButton.innerHTML = '🇺🇸 English';
+  }
+}
+
+if (localStorage.getItem('marigoldLanguage') === 'spanish') {
+  translatePage();
+}
 
 if (languageButton) {
+  languageButton.addEventListener('click', () => {
+    let current = localStorage.getItem('marigoldLanguage');
 
-  languageButton.addEventListener("click", () => {
-
-    spanish = !spanish;
-
-    if (spanish) {
-
-      document.querySelector("h1").innerText =
-        "El Proyecto Marigold";
-
-      document.querySelector(".logo p").innerText =
-        "Tu comunidad en México";
-
-      document.querySelector(".hero h2").innerText =
-        "Bienvenido a Casa 🌼";
-
-      languageButton.innerHTML =
-        "🇺🇸 English";
-
-    } else {
+    if (current === 'spanish') {
+      localStorage.setItem('marigoldLanguage', 'english');
 
       location.reload();
+    } else {
+      localStorage.setItem('marigoldLanguage', 'spanish');
 
+      location.reload();
     }
-
   });
-
 }
 
+/* =====================================
+   SEARCH
+===================================== */
 
-// SEARCH
+const search = document.querySelector('#search');
 
-const search = document.querySelector("#search");
-
-const cards = document.querySelectorAll(".cards a, .states a");
+const searchItems = document.querySelectorAll('.cards a, .states a');
 
 if (search) {
-
-  search.addEventListener("input", () => {
-
+  search.addEventListener('input', () => {
     let value = search.value.toLowerCase();
 
-    cards.forEach(card => {
-
-      let text = card.innerText.toLowerCase();
+    searchItems.forEach((item) => {
+      let text = item.innerText.toLowerCase();
 
       if (text.includes(value)) {
-
-        card.style.display = "block";
-
+        item.style.display = 'block';
       } else {
-
-        card.style.display = "none";
-
+        item.style.display = 'none';
       }
-
     });
-
   });
-
 }
 
+/* =====================================
+   FAVORITES
+===================================== */
 
-// DARK MODE BUTTON
+const favoriteCards = document.querySelectorAll('.cards a, .states a');
 
-const darkButton = document.createElement("button");
+let favorites = JSON.parse(localStorage.getItem('marigoldFavorites')) || [];
 
-darkButton.innerHTML = "🌙";
+favoriteCards.forEach((card) => {
+  let button = document.createElement('button');
 
-darkButton.style.position = "fixed";
-darkButton.style.right = "20px";
-darkButton.style.bottom = "20px";
-darkButton.style.zIndex = "2000";
+  button.innerHTML = '♡';
+
+  button.className = 'favorite';
+
+  card.appendChild(button);
+
+  if (favorites.includes(card.href)) {
+    button.innerHTML = '❤️';
+  }
+
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    event.stopPropagation();
+
+    if (favorites.includes(card.href)) {
+      favorites = favorites.filter((item) => item !== card.href);
+
+      button.innerHTML = '♡';
+    } else {
+      favorites.push(card.href);
+
+      button.innerHTML = '❤️';
+    }
+
+    localStorage.setItem('marigoldFavorites', JSON.stringify(favorites));
+  });
+});
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+const darkButton = document.createElement('button');
+
+darkButton.innerHTML = '🌙';
+
+darkButton.className = 'dark-toggle';
 
 document.body.appendChild(darkButton);
 
+if (localStorage.getItem('marigoldDark') === 'yes') {
+  document.body.classList.add('dark');
 
-darkButton.addEventListener("click", () => {
+  darkButton.innerHTML = '☀️';
+}
 
-  document.body.classList.toggle("dark");
+darkButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 
+  if (document.body.classList.contains('dark')) {
+    localStorage.setItem('marigoldDark', 'yes');
+
+    darkButton.innerHTML = '☀️';
+  } else {
+    localStorage.setItem('marigoldDark', 'no');
+
+    darkButton.innerHTML = '🌙';
+  }
 });
 
+/* =====================================
+   PAGE ANIMATIONS
+===================================== */
 
-// DARK MODE STYLE
+const animated = document.querySelectorAll('.cards a, section');
 
-const style = document.createElement("style");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
 
-style.innerHTML = `
+animated.forEach((item) => {
+  item.classList.add('fade');
 
-.dark {
+  observer.observe(item);
+});
 
-  background:#171717;
+/* =====================================
+   ADD EXTRA STYLES
+===================================== */
 
-  color:white;
+const extraStyle = document.createElement('style');
+
+extraStyle.textContent = `
+
+.menu.show{
+
+display:flex;
+
+flex-direction:column;
 
 }
 
-.dark .header,
-.dark .menu,
-.dark .cards a {
 
-  background:#252525;
+.favorite{
+
+position:absolute;
+
+top:12px;
+
+right:12px;
+
+border:none;
+
+background:white;
+
+border-radius:50%;
+
+width:38px;
+
+height:38px;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+
+.cards a,
+.states a{
+
+position:relative;
+
+}
+
+
+.dark-toggle{
+
+position:fixed;
+
+right:20px;
+
+bottom:25px;
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+border:none;
+
+background:#E7A51B;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:2000;
+
+}
+
+
+.fade{
+
+opacity:0;
+
+transform:translateY(25px);
+
+transition:.5s;
+
+}
+
+
+.visible{
+
+opacity:1;
+
+transform:translateY(0);
 
 }
 
 `;
 
-document.head.appendChild(style);
+document.head.appendChild(extraStyle);
 
-
-console.log("🌼 The Marigold Project loaded!");
+console.log('🌼 The Marigold Project loaded successfully!');
