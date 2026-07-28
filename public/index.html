@@ -13,7 +13,102 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
+<!-- MINI AI ASSISTANT -->
 
+<section class="ai-box">
+
+<h2>🌼 Marigold Assistant</h2>
+
+<p>
+Ask me about housing, moving, jobs, or Mexico.
+</p>
+
+
+<div id="chat">
+
+</div>
+
+
+<input 
+id="aiInput"
+placeholder="Ask something..."
+>
+
+
+<button onclick="askAI()">
+Send
+</button>
+
+
+</section>
+
+
+<script>
+
+function askAI(){
+
+let input=document.getElementById("aiInput");
+
+let chat=document.getElementById("chat");
+
+let question=input.value.toLowerCase();
+
+
+chat.innerHTML += 
+"<p><b>You:</b> "+input.value+"</p>";
+
+
+let answer="";
+
+
+if(question.includes("housing")){
+
+answer="🏠 Check the Housing section to find homes, neighborhoods, and communities by state.";
+
+}
+
+else if(question.includes("job")){
+
+answer="💼 Visit the Jobs section for work and income resources.";
+
+}
+
+else if(question.includes("move") || question.includes("moving")){
+
+answer="🚚 Moving to Mexico takes planning. Start with paperwork, housing, and community connections.";
+
+}
+
+else if(question.includes("veracruz")){
+
+answer="🌊 Veracruz is a beautiful coastal state with cities, beaches, and local communities.";
+
+}
+
+else if(question.includes("hello") || question.includes("hi")){
+
+answer="🌼 Hello! I'm the Marigold Assistant. How can I help?";
+
+}
+
+else{
+
+answer="🌼 I'm still learning! Try asking about housing, jobs, moving, or Mexico.";
+
+}
+
+
+
+chat.innerHTML += 
+"<p><b>🌼 Assistant:</b> "+answer+"</p>";
+
+
+input.value="";
+
+}
+
+
+</script>
 <body>
 
   <!-- HEADER -->
