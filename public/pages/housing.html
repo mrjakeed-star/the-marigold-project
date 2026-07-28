@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,187 +9,115 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff9ef;
+    color:#3d3428;
 }
 
-body{
-margin:0;
-background:#fff9ef;
-color:#3d3428;
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
-
-.header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
-
+.logo {
+    display:flex;
+    gap:15px;
+    align-items:center;
 }
 
-
-.logo{
-
-display:flex;
-align-items:center;
-gap:15px;
-
+.logo h1 {
+    margin:0;
+    color:#b87400;
 }
 
-
-.logo h1{
-
-margin:0;
-color:#b87400;
-
+.logo p {
+    margin:3px;
+    color:#777;
 }
 
-
-.logo p{
-
-margin:3px 0;
-color:#777;
-
+button {
+    background:#e7a51b;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 
+.back-home {
+    padding:20px;
+}
 
-button{
-
-background:#e7a51b;
-color:white;
-
-border:none;
-
-padding:12px 20px;
-
-border-radius:50px;
-
-cursor:pointer;
-
-font-weight:bold;
-
+.back-home a {
+    background:#e7a51b;
+    color:white;
+    padding:12px 22px;
+    border-radius:50px;
+    text-decoration:none;
 }
 
 
 
-
-.back-home{
-
-padding:20px;
-
+.hero {
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#fff0c4,#fff9ef);
 }
 
-
-.back-home a{
-
-background:#e7a51b;
-color:white;
-
-padding:12px 22px;
-
-border-radius:50px;
-
-font-weight:bold;
-
+.hero h2 {
+    color:#b87400;
+    font-size:42px;
 }
 
 
 
-
-.hero{
-
-text-align:center;
-
-padding:70px 20px;
-
-background:linear-gradient(
-135deg,
-#fff0c4,
-#fff9ef
-);
-
+section {
+    padding:30px 20px;
 }
 
 
-.hero h2{
-
-font-size:42px;
-
-color:#b87400;
-
-}
-
-
-.hero p{
-
-font-size:18px;
-
+section h2 {
+    text-align:center;
+    color:#b87400;
 }
 
 
 
-
-section{
-
-padding:40px 20px;
-
-}
-
-
-
-section h2{
-
-text-align:center;
-
-color:#b87400;
-
-}
-
-
-
-
-.housing-grid{
+.housing-grid {
 
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(230px,1fr));
-
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 
 }
 
 
 
-.house-card{
+.house-card {
 
 background:white;
-
 padding:25px;
-
 border-radius:25px;
-
 text-align:center;
-
 box-shadow:0 8px 25px rgba(0,0,0,.12);
 
 opacity:0;
-
 transform:translateY(30px);
-
 transition:.5s;
 
 }
 
 
-.house-card:hover{
+
+.house-card:hover {
 
 transform:translateY(-10px);
 
@@ -198,7 +125,7 @@ transform:translateY(-10px);
 
 
 
-.emoji{
+.emoji {
 
 font-size:45px;
 
@@ -206,7 +133,7 @@ font-size:45px;
 
 
 
-.house-card h3{
+.house-card h3 {
 
 color:#b87400;
 
@@ -214,59 +141,48 @@ color:#b87400;
 
 
 
-.house-button{
+.house-button {
 
 display:inline-block;
-
 margin-top:15px;
-
-background:#e7a51b;
-
-color:white;
-
 padding:12px 20px;
-
+background:#e7a51b;
+color:white;
 border-radius:50px;
-
+text-decoration:none;
 font-weight:bold;
 
 }
 
 
 
-.community{
+.community {
 
 background:#fce4dd;
-
 text-align:center;
 
 }
 
 
-.buttons a{
+
+.buttons a {
 
 display:inline-block;
-
 background:white;
-
 padding:15px 25px;
-
-margin:10px;
-
 border-radius:50px;
+margin:10px;
+text-decoration:none;
 
 }
 
 
 
-footer{
+footer {
 
 background:#342b20;
-
 color:white;
-
 text-align:center;
-
 padding:35px;
 
 }
@@ -276,7 +192,6 @@ padding:35px;
 </style>
 
 </head>
-
 
 
 <body>
@@ -291,16 +206,20 @@ padding:35px;
 
 <div>
 
-<h1>The Marigold Project</h1>
+<h1 id="title">
+The Marigold Project
+</h1>
 
-<p>Your community in Mexico</p>
+<p id="tagline">
+Your community in Mexico
+</p>
 
 </div>
 
 </div>
 
 
-<button id="language-toggle">
+<button id="translate">
 🇪🇸 Español
 </button>
 
@@ -313,7 +232,9 @@ padding:35px;
 
 <a href="../index.html">
 
-← 🌼 <span>Back to Home</span>
+← 🌼 <span id="back">
+Back to Home
+</span>
 
 </a>
 
@@ -324,9 +245,11 @@ padding:35px;
 
 <section class="hero">
 
-<h2>🏠 Housing in Mexico</h2>
+<h2 id="housingTitle">
+🏠 Housing in Mexico
+</h2>
 
-<p>
+<p id="description">
 Explore rentals, neighborhoods, and local communities across Mexico.
 </p>
 
@@ -337,10 +260,13 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 <section>
 
-<h2>🇲🇽 Find Housing By State</h2>
+
+<h2 id="findTitle">
+🇲🇽 Find Housing By State
+</h2>
 
 
-<div class="housing-grid" id="states"></div>
+<div class="housing-grid" id="cards"></div>
 
 
 </section>
@@ -348,22 +274,31 @@ Explore rentals, neighborhoods, and local communities across Mexico.
 
 
 
+
 <section class="community">
 
-<h2>❤️ Need More Help?</h2>
+<h2 id="help">
+❤️ Need More Help?
+</h2>
 
-<p>
+<p id="helpText">
 Connect with people who have already made the move.
 </p>
 
 
 <div class="buttons">
 
-<a href="community.html">🤝 Community</a>
+<a href="community.html">
+🤝 Community
+</a>
 
-<a href="jobs.html">💼 Jobs</a>
+<a href="jobs.html">
+💼 Jobs
+</a>
 
-<a href="moving.html">🚚 Moving</a>
+<a href="moving.html">
+🚚 Moving
+</a>
 
 </div>
 
@@ -372,11 +307,16 @@ Connect with people who have already made the move.
 
 
 
+
 <footer>
 
-<h2>🌼 The Marigold Project</h2>
+<h2>
+🌼 The Marigold Project
+</h2>
 
-<p>Built by community, for community.</p>
+<p>
+Built by community, for community.
+</p>
 
 </footer>
 
@@ -428,11 +368,10 @@ const states=[
 let spanish=false;
 
 
-function createCards(){
 
+function loadCards(){
 
-const box=document.getElementById("states");
-
+let box=document.getElementById("cards");
 
 box.innerHTML="";
 
@@ -440,25 +379,26 @@ box.innerHTML="";
 states.forEach(state=>{
 
 
-box.innerHTML+=`
+box.innerHTML += `
 
 <div class="house-card">
-
 
 <div class="emoji">
 ${state[0]}
 </div>
 
-
-<h3>${state[1]}</h3>
+<h3>
+${state[1]}
+</h3>
 
 
 <p>
-${spanish
+
+${spanish 
 ?"Encuentra casas, alquileres y vecindarios."
 :"Find homes, rentals, and neighborhoods."}
-</p>
 
+</p>
 
 
 <a class="house-button"
@@ -473,7 +413,6 @@ ${spanish
 
 
 </div>
-
 
 `;
 
@@ -496,7 +435,6 @@ document.querySelectorAll(".house-card")
 setTimeout(()=>{
 
 card.style.opacity="1";
-
 card.style.transform="translateY(0)";
 
 },100);
@@ -510,70 +448,74 @@ card.style.transform="translateY(0)";
 
 
 
-
-document.getElementById("language-toggle")
-.onclick=function(){
+document.getElementById("translate").onclick=function(){
 
 
 spanish=!spanish;
 
 
-document.querySelector(".logo h1").textContent =
+title.innerText =
 spanish
 ?"El Proyecto Marigold"
 :"The Marigold Project";
 
 
-document.querySelector(".logo p").textContent =
+tagline.innerText =
 spanish
 ?"Tu comunidad en México"
 :"Your community in Mexico";
 
 
-document.querySelector(".back-home span").textContent =
+back.innerText =
 spanish
 ?"Volver al Inicio"
 :"Back to Home";
 
 
-document.querySelector(".hero h2").textContent =
+housingTitle.innerText =
 spanish
 ?"🏠 Vivienda en México"
 :"🏠 Housing in Mexico";
 
 
-document.querySelector(".hero p").textContent =
+description.innerText =
 spanish
 ?"Explora alquileres, vecindarios y comunidades locales en México."
 :"Explore rentals, neighborhoods, and local communities across Mexico";
 
 
-document.querySelector(".hero + section h2").textContent =
+findTitle.innerText =
 spanish
 ?"🇲🇽 Buscar Vivienda por Estado"
 :"🇲🇽 Find Housing By State";
 
 
-document.querySelector(".community h2").textContent =
+help.innerText =
 spanish
 ?"❤️ ¿Necesitas Más Ayuda?"
 :"❤️ Need More Help?";
 
 
-this.textContent=
+helpText.innerText =
+spanish
+?"Conecta con personas que ya hicieron el cambio."
+:"Connect with people who have already made the move.";
+
+
+this.innerText =
 spanish
 ?"🇺🇸 English"
 :"🇪🇸 Español";
 
 
-createCards();
+loadCards();
 
 
 };
 
 
 
-createCards();
+loadCards();
 
 
 </script>
