@@ -1,21 +1,23 @@
-/* =====================================
+/* =================================
    🌼 THE MARIGOLD PROJECT
-   App JavaScript
-===================================== */
+   JavaScript
+================================= */
 
 
-/* =====================
-   MOBILE MENU
-===================== */
+/* ================================
+   MOBILE MENU ☰
+================================ */
+
 
 const menuButton = document.querySelector(".menu-button");
-const menu = document.querySelector(".menu");
+const nav = document.querySelector(".nav");
 
-if (menuButton && menu) {
+
+if (menuButton && nav) {
 
   menuButton.addEventListener("click", () => {
 
-    menu.classList.toggle("open");
+    nav.classList.toggle("open");
 
   });
 
@@ -25,9 +27,10 @@ if (menuButton && menu) {
 
 
 
-/* =====================
-   LANGUAGE SWITCH
-===================== */
+/* ================================
+   LANGUAGE SWITCH 🇪🇸
+================================ */
+
 
 const languageButton =
 document.querySelector("#language-toggle");
@@ -47,8 +50,8 @@ const translations = {
   "Welcome Home 🌼":
   "Bienvenido a Casa 🌼",
 
-  "Starting over in Mexico is a big journey.":
-  "Comenzar de nuevo en México es un gran viaje.",
+  "Starting a new life in Mexico is a big journey.":
+  "Comenzar una nueva vida en México es un gran viaje.",
 
   "What do you need today? 🌱":
   "¿Qué necesitas hoy? 🌱",
@@ -66,23 +69,24 @@ const translations = {
 
 
 
-function translatePage(){
+function translatePage() {
 
-  document.querySelectorAll(
-    "h1,h2,h3,p,a,button"
-  )
+  document
+  .querySelectorAll("h1,h2,h3,p,a,button")
   .forEach(element => {
 
-    let text =
+
+    const text =
     element.innerText.trim();
 
 
-    if(translations[text]){
+    if (translations[text]) {
 
       element.innerText =
       translations[text];
 
     }
+
 
   });
 
@@ -118,7 +122,6 @@ location.reload();
 
 });
 
-
 }
 
 
@@ -126,19 +129,18 @@ location.reload();
 
 
 
-/* =====================
-   SEARCH
-===================== */
+
+/* ================================
+   SEARCH 🔎
+================================ */
 
 
 const search =
 document.querySelector("#search");
 
 
-const items =
-document.querySelectorAll(
-".cards a,.states a"
-);
+const searchable =
+document.querySelectorAll(".card,.states a");
 
 
 
@@ -149,15 +151,15 @@ search.addEventListener(
 ()=>{
 
 
-let value =
+const value =
 search.value.toLowerCase();
 
 
 
-items.forEach(item=>{
+searchable.forEach(item=>{
 
 
-let text =
+const text =
 item.innerText.toLowerCase();
 
 
@@ -170,7 +172,6 @@ item.style.display =
 
 
 }
-
 
 else{
 
@@ -188,7 +189,6 @@ item.style.display =
 
 });
 
-
 }
 
 
@@ -197,9 +197,9 @@ item.style.display =
 
 
 
-/* =====================
-   DARK MODE
-===================== */
+/* ================================
+   DARK MODE 🌙
+================================ */
 
 
 const darkButton =
@@ -211,12 +211,29 @@ darkButton.innerHTML =
 
 
 darkButton.className =
-"dark-button";
+"dark-toggle";
 
 
 document.body.appendChild(
 darkButton
 );
+
+
+
+if(localStorage.getItem("darkMode")
+==="enabled"){
+
+
+document.body.classList.add(
+"dark"
+);
+
+
+darkButton.innerHTML =
+"☀️";
+
+
+}
 
 
 
@@ -233,30 +250,32 @@ document.body.classList.toggle(
 
 if(document.body.classList.contains("dark")){
 
+
+localStorage.setItem(
+"darkMode",
+"enabled"
+);
+
+
 darkButton.innerHTML =
 "☀️";
 
-localStorage.setItem(
-"dark",
-"yes"
-);
 
 }
 
-
 else{
+
+
+localStorage.setItem(
+"darkMode",
+"disabled"
+);
 
 
 darkButton.innerHTML =
 "🌙";
 
 
-localStorage.setItem(
-"dark",
-"no"
-);
-
-
 }
 
 
@@ -265,140 +284,95 @@ localStorage.setItem(
 
 
 
-if(localStorage.getItem("dark")
-==="yes"){
-
-document.body.classList.add(
-"dark"
-);
-
-darkButton.innerHTML =
-"☀️";
-
-}
 
 
 
-
-
-
-
-
-/* =====================
+/* ================================
    FAVORITES ❤️
-===================== */
+================================ */
 
 
 const cards =
-document.querySelectorAll(
-".cards a,.states a"
-);
-
-
-let favorites =
-JSON.parse(
-localStorage.getItem(
-"favorites"
-)
-)
-|| [];
-
+document.querySelectorAll(".card");
 
 
 cards.forEach(card=>{
 
 
-let heart =
-document.createElement(
-"button"
-);
+const favorite =
+document.createElement("button");
 
 
-heart.innerHTML =
+favorite.innerHTML =
 "♡";
 
 
-heart.className =
-"favorite";
-
+favorite.className =
+"favorite-button";
 
 
 card.appendChild(
-heart
+favorite
 );
 
 
 
-heart.addEventListener(
+favorite.addEventListener(
 "click",
-(e)=>{
+(event)=>{
 
 
-e.preventDefault();
+event.preventDefault();
 
 
-card.classList.toggle(
-"liked"
+
+favorite.classList.toggle(
+"saved"
 );
 
 
 
-if(card.classList.contains("liked")){
+if(favorite.classList.contains("saved")){
 
-heart.innerHTML =
+
+favorite.innerHTML =
 "❤️";
 
 
-favorites.push(
-card.href
-);
-
-
 }
-
 
 else{
 
 
-heart.innerHTML =
+favorite.innerHTML =
 "♡";
-
-
-favorites =
-favorites.filter(
-item =>
-item !== card.href
-);
 
 
 }
 
 
 
-localStorage.setItem(
-"favorites",
-JSON.stringify(
-favorites
-)
+});
+
+
+});
+
+
+
+
+
+
+
+/* ================================
+   SCROLL ANIMATIONS ✨
+================================ */
+
+
+const animated =
+document.querySelectorAll(
+".card, section"
 );
 
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-/* =====================
-   SCROLL ANIMATIONS ✨
-===================== */
 
 
 const observer =
@@ -411,8 +385,9 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
+
 entry.target.classList.add(
-"show"
+"visible"
 );
 
 
@@ -424,18 +399,13 @@ entry.target.classList.add(
 
 },
 {
-
 threshold:.15
-
 }
 );
 
 
 
-document.querySelectorAll(
-"section,.cards a"
-)
-.forEach(item=>{
+animated.forEach(item=>{
 
 
 item.classList.add(
@@ -456,21 +426,20 @@ item
 
 
 
-/* =====================
-   EXTRA STYLES
-===================== */
+/* ================================
+   EXTRA CSS
+================================ */
 
 
-const style =
-document.createElement(
-"style"
-);
+const effects =
+document.createElement("style");
 
 
-style.innerHTML = `
+
+effects.innerHTML = `
 
 
-.menu.open{
+.nav.open{
 
 display:flex;
 
@@ -480,13 +449,13 @@ flex-direction:column;
 
 
 
-.dark-button{
+.dark-toggle{
 
 position:fixed;
 
-right:20px;
+right:25px;
 
-bottom:20px;
+bottom:25px;
 
 width:55px;
 
@@ -500,15 +469,37 @@ font-size:22px;
 
 z-index:2000;
 
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
 }
 
 
 
-.favorite{
+.favorite-button{
 
 margin-top:15px;
 
-background:#fff1c9;
+background:#fff0c7;
+
+}
+
+
+
+.favorite-button.saved{
+
+animation:heart .4s;
+
+}
+
+
+
+@keyframes heart{
+
+50%{
+
+transform:scale(1.4);
+
+}
 
 }
 
@@ -520,13 +511,13 @@ opacity:0;
 
 transform:translateY(40px);
 
-transition:.7s;
+transition:.8s;
 
 }
 
 
 
-.show{
+.visible{
 
 opacity:1;
 
@@ -535,24 +526,14 @@ transform:translateY(0);
 }
 
 
-
-.liked{
-
-box-shadow:
-
-0 0 25px #e7a51b;
-
-}
-
-
 `;
 
 
 
-document.head.appendChild(style);
+document.head.appendChild(effects);
 
 
 
 console.log(
-"🌼 The Marigold Project loaded successfully!"
+"🌼 Marigold Project loaded!"
 );
