@@ -10,10 +10,186 @@
 
 <link rel="stylesheet" href="../style.css">
 
+<style>
+
+body {
+background:#fff9ef;
+}
+
+
+/* HERO */
+
+.housing-hero {
+
+padding:80px 20px;
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+#fff0c4,
+#fff9ef
+);
+
+}
+
+
+.housing-hero h1 {
+
+font-size:48px;
+color:#b87400;
+
+}
+
+
+.housing-hero p {
+
+font-size:18px;
+max-width:700px;
+margin:20px auto;
+
+}
+
+
+
+
+/* CARDS */
+
+.housing-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:40px 20px;
+
+}
+
+
+
+.house-card {
+
+background:white;
+
+border-radius:30px;
+
+padding:30px;
+
+text-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.12);
+
+transition:.35s;
+
+animation:slideUp .6s ease;
+
+}
+
+
+
+.house-card:hover {
+
+transform:
+translateY(-12px)
+scale(1.03);
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.18);
+
+}
+
+
+
+.house-card .emoji {
+
+font-size:55px;
+
+}
+
+
+
+.house-card h2 {
+
+color:#b87400;
+
+margin:15px;
+
+}
+
+
+
+.house-card p {
+
+color:#666;
+
+}
+
+
+
+.house-button {
+
+display:inline-block;
+
+margin-top:15px;
+
+background:#e7a51b;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+}
+
+
+
+.house-button:hover {
+
+background:#b87400;
+
+}
+
+
+
+
+@keyframes slideUp {
+
+from {
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+</style>
+
 </head>
 
 
+
 <body>
+
 
 
 <header class="header">
@@ -23,84 +199,141 @@
 🌼
 
 <div>
+
 <h1>The Marigold Project</h1>
+
 <p>Your community in Mexico 🇲🇽</p>
+
 </div>
 
 </div>
+
 
 </header>
 
 
 
-<section class="hero">
 
-<h2>🏠 Housing in Mexico</h2>
 
-<h3>Find your next home</h3>
+<section class="housing-hero">
+
+<h1>
+🏠 Find Housing in Mexico
+</h1>
+
 
 <p>
-Find housing groups, neighborhoods, and resources across Mexico.
+Connect with local communities, housing groups, and people who know the area.
 </p>
 
+
 </section>
+
 
 
 
 
 <section>
 
-<h2>🇲🇽 Housing By State</h2>
+
+<h2>
+🇲🇽 Choose Your State
+</h2>
 
 
-<div class="cards">
+<div class="housing-grid">
 
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Aguascalientes+Mexico" target="_blank">
-🏠
-<h3>Aguascalientes</h3>
-<p>Find Housing Groups</p>
+
+<div class="house-card">
+
+<div class="emoji">🌊</div>
+
+<h2>Veracruz</h2>
+
+<p>Find local housing communities</p>
+
+<a class="house-button"
+href="https://www.facebook.com/groups/search/groups/?q=Veracruz+Mexico"
+target="_blank">
+
+🔎 Search Groups
+
 </a>
 
+</div>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Mexico" target="_blank">
-🌊
-<h3>Baja California</h3>
-<p>Find Housing Groups</p>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🌺</div>
+
+<h2>Oaxaca</h2>
+
+<p>Find local housing communities</p>
+
+<a class="house-button"
+href="https://www.facebook.com/groups/search/groups/?q=Oaxaca+Mexico"
+target="_blank">
+
+🔎 Search Groups
+
 </a>
 
+</div>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Jalisco+Mexico" target="_blank">
-🌵
-<h3>Jalisco</h3>
-<p>Find Housing Groups</p>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🌵</div>
+
+<h2>Jalisco</h2>
+
+<p>Find local housing communities</p>
+
+<a class="house-button"
+href="https://www.facebook.com/groups/search/groups/?q=Jalisco+Mexico"
+target="_blank">
+
+🔎 Search Groups
+
 </a>
 
+</div>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Oaxaca+Mexico" target="_blank">
-🌺
-<h3>Oaxaca</h3>
-<p>Find Housing Groups</p>
+
+
+
+<div class="house-card">
+
+<div class="emoji">🏝️</div>
+
+<h2>Yucatán</h2>
+
+<p>Find local housing communities</p>
+
+<a class="house-button"
+href="https://www.facebook.com/groups/search/groups/?q=Yucatan+Mexico"
+target="_blank">
+
+🔎 Search Groups
+
 </a>
 
+</div>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Veracruz+Mexico" target="_blank">
-🌊
-<h3>Veracruz</h3>
-<p>Find Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Yucatan+Mexico" target="_blank">
-🏝️
-<h3>Yucatán</h3>
-<p>Find Housing Groups</p>
-</a>
 
 
 </div>
 
+
 </section>
+
+
 
 
 
@@ -111,6 +344,7 @@ Find housing groups, neighborhoods, and resources across Mexico.
 <p>Built by community, for community ❤️</p>
 
 </footer>
+
 
 
 </body>
