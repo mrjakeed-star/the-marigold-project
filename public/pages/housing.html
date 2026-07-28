@@ -1,299 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+import type { Route } from "./+types/housing";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Housing | The Marigold Project" },
+    {
+      name: "description",
+      content: "Find housing and communities across Mexico.",
+    },
+  ];
+}
+
+
+const states = [
+  ["🏠", "Aguascalientes"],
+  ["🌊", "Baja California"],
+  ["🌅", "Baja California Sur"],
+  ["🌴", "Campeche"],
+  ["🌿", "Chiapas"],
+  ["🐺", "Chihuahua"],
+  ["🏜️", "Coahuila"],
+  ["🌋", "Colima"],
+  ["🤠", "Durango"],
+  ["🏘️", "Guanajuato"],
+  ["🌊", "Guerrero"],
+  ["⛰️", "Hidalgo"],
+  ["🌵", "Jalisco"],
+  ["🏙️", "Estado de Mexico"],
+  ["🌺", "Michoacan"],
+  ["🌸", "Morelos"],
+  ["🏝️", "Nayarit"],
+  ["🏢", "Nuevo Leon"],
+  ["🌺", "Oaxaca"],
+  ["🏛️", "Puebla"],
+  ["🏡", "Queretaro"],
+  ["🏖️", "Quintana Roo"],
+  ["🌵", "San Luis Potosi"],
+  ["🌵", "Sinaloa"],
+  ["☀️", "Sonora"],
+  ["🌴", "Tabasco"],
+  ["🌊", "Tamaulipas"],
+  ["🏡", "Tlaxcala"],
+  ["🌊", "Veracruz"],
+  ["🏝️", "Yucatan"],
+  ["⛰️", "Zacatecas"],
+];
 
-<head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+function facebookLink(state: string) {
+  return `https://www.facebook.com/groups/search/groups/?q=${encodeURIComponent(
+    state + " Mexico"
+  )}`;
+}
 
-<title>🏠 Housing | The Marigold Project</title>
 
-<link rel="stylesheet" href="../style.css">
+export default function Housing() {
+  return (
+    <>
 
-</head>
+      <section className="hero">
 
+        <h2>🏠 Housing in Mexico 🌼</h2>
 
-<body>
+        <h3>
+          Find a place to call home
+        </h3>
 
+        <p>
+          Explore rentals, neighborhoods, and local communities across Mexico.
+        </p>
 
-<header class="header">
+      </section>
 
-<div class="logo">
 
-🌼
 
-<div>
-<h1>The Marigold Project</h1>
-<p>Your community in Mexico 🇲🇽</p>
-</div>
+      <section>
 
-</div>
+        <h2>
+          🇲🇽 Find Housing By State
+        </h2>
 
-</header>
 
+        <div className="cards">
 
+          {states.map(([emoji, state]) => (
 
+            <a
+              key={state}
+              href={facebookLink(state)}
+              target="_blank"
+              rel="noreferrer"
+            >
 
-<section class="hero">
+              <div style={{
+                fontSize: "45px",
+                marginBottom: "10px"
+              }}>
+                {emoji}
+              </div>
 
-<h2>🏠 Housing in Mexico</h2>
 
-<h3>Find your next place to call home</h3>
+              <h3>
+                {state}
+              </h3>
 
-<p>
-Explore Facebook communities, housing groups, and local resources across all Mexican states.
-</p>
 
-</section>
+              <p>
+                🏠 Find Facebook Housing Groups
+              </p>
 
 
+            </a>
 
+          ))}
 
+        </div>
 
-<section>
+      </section>
 
-<h2>🇲🇽 Find Housing By State</h2>
 
 
-<div class="cards">
+      <section className="community">
 
+        <h2>
+          ❤️ Need More Help?
+        </h2>
 
+        <p>
+          Connect with people who have already made the move.
+        </p>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Aguascalientes+Mexico" target="_blank">
-🏠
-<h3>Aguascalientes</h3>
-<p>Facebook Housing Groups</p>
-</a>
 
+        <div className="buttons">
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Mexico" target="_blank">
-🌊
-<h3>Baja California</h3>
-<p>Facebook Housing Groups</p>
-</a>
+          <a href="/community">
+            🤝 Community
+          </a>
 
+          <a href="/jobs">
+            💼 Jobs
+          </a>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Baja+California+Sur+Mexico" target="_blank">
-🌅
-<h3>Baja California Sur</h3>
-<p>Facebook Housing Groups</p>
-</a>
+          <a href="/moving">
+            🚚 Moving
+          </a>
 
+        </div>
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Campeche+Mexico" target="_blank">
-🌴
-<h3>Campeche</h3>
-<p>Facebook Housing Groups</p>
-</a>
+      </section>
 
 
-<a href="https://www.facebook.com/groups/search/groups/?q=Chiapas+Mexico" target="_blank">
-🌿
-<h3>Chiapas</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Chihuahua+Mexico" target="_blank">
-🐺
-<h3>Chihuahua</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Coahuila+Mexico" target="_blank">
-🏜️
-<h3>Coahuila</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Colima+Mexico" target="_blank">
-🌋
-<h3>Colima</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Durango+Mexico" target="_blank">
-🤠
-<h3>Durango</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Guanajuato+Mexico" target="_blank">
-🏘️
-<h3>Guanajuato</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Guerrero+Mexico" target="_blank">
-🌊
-<h3>Guerrero</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Hidalgo+Mexico" target="_blank">
-⛰️
-<h3>Hidalgo</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Jalisco+Mexico" target="_blank">
-🌵
-<h3>Jalisco</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Estado+de+Mexico" target="_blank">
-🏙️
-<h3>Estado de México</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Michoacan+Mexico" target="_blank">
-🌺
-<h3>Michoacán</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Morelos+Mexico" target="_blank">
-🌸
-<h3>Morelos</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Nayarit+Mexico" target="_blank">
-🏝️
-<h3>Nayarit</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Nuevo+Leon+Mexico" target="_blank">
-🏢
-<h3>Nuevo León</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Oaxaca+Mexico" target="_blank">
-🌺
-<h3>Oaxaca</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Puebla+Mexico" target="_blank">
-🏛️
-<h3>Puebla</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Queretaro+Mexico" target="_blank">
-🏡
-<h3>Querétaro</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Quintana+Roo+Mexico" target="_blank">
-🏖️
-<h3>Quintana Roo</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=San+Luis+Potosi+Mexico" target="_blank">
-🏜️
-<h3>San Luis Potosí</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Sinaloa+Mexico" target="_blank">
-🌵
-<h3>Sinaloa</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Sonora+Mexico" target="_blank">
-☀️
-<h3>Sonora</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Tabasco+Mexico" target="_blank">
-🌴
-<h3>Tabasco</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Tamaulipas+Mexico" target="_blank">
-🌊
-<h3>Tamaulipas</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Tlaxcala+Mexico" target="_blank">
-🏡
-<h3>Tlaxcala</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Veracruz+Mexico" target="_blank">
-🌊
-<h3>Veracruz</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Yucatan+Mexico" target="_blank">
-🏝️
-<h3>Yucatán</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-<a href="https://www.facebook.com/groups/search/groups/?q=Zacatecas+Mexico" target="_blank">
-⛰️
-<h3>Zacatecas</h3>
-<p>Facebook Housing Groups</p>
-</a>
-
-
-
-</div>
-
-</section>
-
-
-
-
-
-<footer>
-
-<h2>🌼 The Marigold Project</h2>
-
-<p>Built by community, for community ❤️</p>
-
-</footer>
-
-
-</body>
-
-</html>
+    </>
+  );
+}
