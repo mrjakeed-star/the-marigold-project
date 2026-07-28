@@ -12,64 +12,12 @@
 
 <style>
 
-.housing-hero {
-  text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(135deg,#fff0c4,#fff9ef);
+.back-home {
+  padding:20px;
+  background:#fff9ef;
 }
 
-.housing-hero h1 {
-  font-size:45px;
-  color:#b87400;
-}
-
-.housing-hero p {
-  max-width:700px;
-  margin:20px auto;
-  font-size:18px;
-}
-
-
-.housing-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  padding:40px 20px;
-}
-
-
-.house-card {
-  background:white;
-  padding:30px;
-  border-radius:30px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
-  transition:.3s;
-}
-
-
-.house-card:hover {
-  transform:translateY(-10px);
-}
-
-
-.emoji {
-  font-size:50px;
-}
-
-
-.house-card h3 {
-  color:#b87400;
-  margin:15px;
-}
-
-
-.house-card p {
-  color:#666;
-}
-
-
-.house-button {
+.back-home a {
 
 display:inline-block;
 
@@ -81,11 +29,142 @@ padding:12px 22px;
 
 border-radius:50px;
 
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.back-home a:hover {
+
+background:#b87400;
+
+transform:translateX(-5px);
+
+}
+
+
+
+.housing-hero {
+
+text-align:center;
+
+padding:70px 20px;
+
+background:linear-gradient(135deg,#fff0c4,#fff9ef);
+
+}
+
+
+.housing-hero h1 {
+
+font-size:45px;
+
+color:#b87400;
+
+}
+
+
+.housing-hero p {
+
+max-width:700px;
+
+margin:20px auto;
+
+font-size:18px;
+
+}
+
+
+
+.housing-grid {
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+padding:40px 20px;
+
+}
+
+
+
+.house-card {
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+transition:.3s;
+
+animation:show .6s;
+
+}
+
+
+
+.house-card:hover {
+
+transform:translateY(-10px);
+
+}
+
+
+
+.house-card .emoji {
+
+font-size:50px;
+
+}
+
+
+
+.house-card h3 {
+
+color:#b87400;
+
+margin:15px 0;
+
+}
+
+
+
+.house-card p {
+
+color:#666;
+
+}
+
+
+
+.house-button {
+
+display:inline-block;
+
 margin-top:15px;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+background:#e7a51b;
+
+color:white;
 
 font-weight:bold;
 
+transition:.3s;
+
 }
+
 
 
 .house-button:hover {
@@ -93,6 +172,29 @@ font-weight:bold;
 background:#b87400;
 
 }
+
+
+
+@keyframes show {
+
+from {
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
 
 </style>
 
@@ -122,12 +224,26 @@ background:#b87400;
 
 
 
+<div class="back-home">
+
+<a href="../index.html">
+
+← 🌼 Back to Home
+
+</a>
+
+</div>
+
+
+
 <section class="housing-hero">
 
 <h1>🏠 Housing in Mexico</h1>
 
 <p>
-Explore rentals, neighborhoods, and homes across Mexico.
+
+Explore rentals, neighborhoods, and housing resources across Mexico.
+
 </p>
 
 </section>
@@ -136,7 +252,9 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <section>
 
+
 <h2>🇲🇽 Find Housing Resources</h2>
+
 
 
 <div class="housing-grid">
@@ -147,15 +265,18 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <div class="emoji">🏡</div>
 
-<h3>Mexico Rentals</h3>
+<h3>Inmuebles24</h3>
 
-<p>Search homes and apartments throughout Mexico.</p>
+<p>Homes, apartments, and rentals across Mexico.</p>
 
 <a class="house-button" target="_blank" href="https://www.inmuebles24.com">
-🏠 Inmuebles24
+
+🏠 Visit Site
+
 </a>
 
 </div>
+
 
 
 
@@ -163,15 +284,18 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <div class="emoji">🏘️</div>
 
-<h3>More Rentals</h3>
+<h3>Vivanuncios</h3>
 
-<p>Find houses, apartments, and local listings.</p>
+<p>Search local houses and apartments.</p>
 
 <a class="house-button" target="_blank" href="https://www.vivanuncios.com.mx">
-🔎 Vivanuncios
+
+🔎 Search Homes
+
 </a>
 
 </div>
+
 
 
 
@@ -179,31 +303,37 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <div class="emoji">💰</div>
 
-<h3>Budget Housing</h3>
+<h3>Mercado Libre</h3>
 
-<p>Look for affordable homes and properties.</p>
+<p>Property listings and rentals.</p>
 
 <a class="house-button" target="_blank" href="https://listado.mercadolibre.com.mx/inmuebles">
-🏠 Mercado Libre
+
+🏠 Browse Listings
+
 </a>
 
 </div>
+
 
 
 
 <div class="house-card">
 
-<div class="emoji">🌎</div>
+<div class="emoji">🤝</div>
 
-<h3>Community Housing</h3>
+<h3>Community Help</h3>
 
-<p>Connect with people moving to Mexico.</p>
+<p>Find people moving and living in Mexico.</p>
 
-<a class="house-button" target="_blank" href="https://www.google.com/search?q=Mexico+housing+groups">
-🤝 Find Communities
+<a class="house-button" target="_blank" href="https://www.google.com/search?q=Mexico+housing+community+groups">
+
+🌎 Find Groups
+
 </a>
 
 </div>
+
 
 
 
@@ -213,13 +343,16 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <h3>Veracruz</h3>
 
-<p>Homes, rentals, and neighborhoods.</p>
+<p>Explore homes and neighborhoods.</p>
 
 <a class="house-button" target="_blank" href="https://www.google.com/search?q=Veracruz+Mexico+rentals">
-🏠 Search Veracruz
+
+🏠 Search
+
 </a>
 
 </div>
+
 
 
 
@@ -229,13 +362,16 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <h3>Oaxaca</h3>
 
-<p>Homes, rentals, and neighborhoods.</p>
+<p>Explore homes and neighborhoods.</p>
 
 <a class="house-button" target="_blank" href="https://www.google.com/search?q=Oaxaca+Mexico+rentals">
-🏠 Search Oaxaca
+
+🏠 Search
+
 </a>
 
 </div>
+
 
 
 
@@ -245,13 +381,16 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <h3>Jalisco</h3>
 
-<p>Homes, rentals, and neighborhoods.</p>
+<p>Explore homes and neighborhoods.</p>
 
 <a class="house-button" target="_blank" href="https://www.google.com/search?q=Jalisco+Mexico+rentals">
-🏠 Search Jalisco
+
+🏠 Search
+
 </a>
 
 </div>
+
 
 
 
@@ -261,10 +400,12 @@ Explore rentals, neighborhoods, and homes across Mexico.
 
 <h3>Yucatán</h3>
 
-<p>Homes, rentals, and neighborhoods.</p>
+<p>Explore homes and neighborhoods.</p>
 
 <a class="house-button" target="_blank" href="https://www.google.com/search?q=Yucatan+Mexico+rentals">
-🏠 Search Yucatán
+
+🏠 Search
+
 </a>
 
 </div>
@@ -282,23 +423,19 @@ Explore rentals, neighborhoods, and homes across Mexico.
 <h2>❤️ Need More Help?</h2>
 
 <p>
+
 Connect with people who have already made the move.
+
 </p>
 
 
 <div class="buttons">
 
-<a href="community.html">
-🤝 Community
-</a>
+<a href="community.html">🤝 Community</a>
 
-<a href="jobs.html">
-💼 Jobs
-</a>
+<a href="jobs.html">💼 Jobs</a>
 
-<a href="moving.html">
-🚚 Moving
-</a>
+<a href="moving.html">🚚 Moving</a>
 
 </div>
 
